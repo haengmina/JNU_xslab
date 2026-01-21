@@ -4,7 +4,7 @@
             "configFiles": [
                 // "interface/ftdi/universal-debugger-jtag.cfg",
                 // "interface/ftdi/universal-debugger-swd.cfg",
-                "interface/ftdi/universal-debugger-swd.cfg",
+                "interface/stlink.cfg",
                 "target/stm32g0x.cfg"
             ],
             "cwd": "${workspaceRoot}",

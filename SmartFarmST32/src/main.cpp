@@ -17,10 +17,18 @@
 #include <packet_manager.h>
 #ifndef STDOUT_TO_UART_ENABLE
 #include <SEGGER_RTT.h>
+#include <led_switch.h>
+#include <use_sensor.h>
 #endif
 
 #define _BV(x) (1 << x)
 const char *uart_test_message = "Hello\n";
+
+static const float TEMP_VDD_MV = 3300.0f;
+static const float PULL_DOWN_R = 1100.0f;
+static const float R0  = 10000.0f;
+static const float B_K = 3435.0f;
+static const float T0 = 298.15f; 
 
 Packet_Manager manager;
 
@@ -195,6 +203,27 @@ int main()
 		}
 #ifdef STATUS_TEST_LOOP_ENABLE
 		update_Test_Loop();
+		float i_temp = Sensor_Interface_Board::get_Current_uA(0);
+		float v_hum = Sensor_Interface_Board::get_Voltage_mV(1);
+
+		float Re_temp=-40+i_temp*120/1000;
+		float Re_hum=v_hum*100/3000;
+		
+		if(Re_temp>=5.0f||Re_hum>=5.0f){
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+		} else {
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+		}
+
 #endif
+	use_sensor(1, 23, 0, 33);//온도/습도
+
+	//float H_mV1 = Sensor_Interface_Board::get_Voltage_mV(0);
+	//float H_mV12=H_mV1*100.0f/3000.0f;
+	//printf("습도 전압: %.2f 습도: %.2f mV\r\n", H_mV1, H_mV12);
+    //float H_mV13 = Sensor_Interface_Board::get_Voltage_mV(2);
+	//float H_mV123=H_mV13*100.0f/3000.0f;
+	//printf("습도 전압: %.2f 습도: %.2f mV\r\n", H_mV13, H_mV123);
+	
 	}
-}	
+}

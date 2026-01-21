@@ -51,7 +51,7 @@ namespace Protocol
 								};
 	enum class SELECT_STATUS : uint8_t {DENIED = 0x00, OK};
 	struct Interface {
-		enum class TYPE : uint8_t {RS232 = 0x01, RS422, RS485, DDI, SDI};
+		enum class TYPE : uint8_t {RS232 = 0x01, RS422, RS485, DDI};
 		enum class CHANNEL : uint8_t {CH1 = 0x01, CH2};
 		enum class DATABIT : uint8_t {BIT7 = 7, BIT8};
 		enum class PARITY : uint8_t {NONE = 0x00, ODD, EVEN};

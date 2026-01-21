@@ -19,7 +19,7 @@
 class Sensor_Interface_Board
 {
 public:
-	enum class INTERFACE_MODE : uint8_t { RS232, RS422, RS485, DDI, SDI };
+	enum class INTERFACE_MODE : uint8_t { RS232, RS422, RS485, SDI, DDI };
 
 	/**
 	 * @brief Sensor Interface Board를 초기화합니다
@@ -268,7 +268,6 @@ private:
 
 	/**
 	 * @brief RX LED의 상태를 업데이트합니다
-	 * 
 	 */
 	static void update_RX_LED_Status();
 };

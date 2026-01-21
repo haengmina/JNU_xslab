@@ -13,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True CACHE INTERNAL "")
 
 cmake_minimum_required(VERSION 3.19)
 project(SmartFarmST32
-    VERSION 1.1.8
+    VERSION 1.1.7
     DESCRIPTION "센서 노드 및 제어 노드 MCU Software"
     HOMEPAGE_URL "https://git.xslab.co.kr/xslab/daeeun/smartfarmst32"
 )

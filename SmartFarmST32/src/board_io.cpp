@@ -448,7 +448,6 @@ void set_Buzzer(bool enable)
 	{
 		GPIOC->ODR |= _BV(2);
 	}
-	set_Status_LED(STATUS_LED_TYPE::YELLOW, enable);
 }
 
 void set_DAC_Value(uint16_t value)

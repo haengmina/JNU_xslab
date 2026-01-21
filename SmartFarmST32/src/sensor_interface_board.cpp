@@ -529,18 +529,6 @@ uint8_t Sensor_Interface_Board::set_Interface_Setting(const Protocol::Interface:
 			return 1;
 	}
 
-	target->AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_TXINVERT_INIT | UART_ADVFEATURE_RXINVERT_INIT;
-	if(param.type == Protocol::Interface::TYPE::SDI)
-	{
-		target->AdvancedInit.RxPinLevelInvert = UART_ADVFEATURE_RXINV_ENABLE;
-		target->AdvancedInit.TxPinLevelInvert = UART_ADVFEATURE_TXINV_ENABLE;
-	}
-	else
-	{
-		target->AdvancedInit.RxPinLevelInvert = UART_ADVFEATURE_RXINV_DISABLE;
-		target->AdvancedInit.TxPinLevelInvert = UART_ADVFEATURE_TXINV_DISABLE;
-	}
-
 	target->Init.WordLength = UART_WORDLENGTH_8B;
 	target->Init.Mode = UART_MODE_TX_RX;
 	target->Init.OverSampling = UART_OVERSAMPLING_16;
@@ -568,7 +556,6 @@ uint8_t Sensor_Interface_Board::set_Interface_Setting(const Protocol::Interface:
 			break;
 
 		case Protocol::Interface::TYPE::DDI:
-		case Protocol::Interface::TYPE::SDI:
 			set_Interface_Mode(channel_index, Sensor_Interface_Board::INTERFACE_MODE::DDI);
 			break;
 
@@ -770,12 +757,11 @@ uint8_t Sensor_Interface_Board::Received_Packet_Handler(Packet_Manager* const ma
 					return 1;
 			}
 			auto target = get_Interface_Handle(target_index);
-			auto tx_data_length = request->header.data_length - sizeof(Protocol::Interface::Data_Buffer);
 			if(serial_interface[target_index] == INTERFACE_MODE::DDI) { set_DB9_12V_Output(true); }
-			if(tx_data_length)
+			if(request->header.data_length)
 			{
 				set_Interface_TX(target_index, true);
-				HAL_UART_Transmit(target, buffer->data, tx_data_length, -1);
+				HAL_UART_Transmit(target, buffer->data, request->header.data_length - 1, -1);
 				set_Interface_TX(target_index, false);
 			}
 

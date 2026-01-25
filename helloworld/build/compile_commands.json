@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/mini/xslab/helloworld/build",
+  "command": "/usr/bin/c++  -I/home/mini/xslab/helloworld/include -std=gnu++17 -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -Og -gdwarf-4 -DDEBUG -DVERSION=\\\"v0.0.0\\\" -DVERSION_MAJOR=0 -DVERSION_MINOR=0 -DVERSION_PATCH=0 -DCOMMIT_HASH=\\\"69bc78dc12d8de00313d57f0a5f970f4a1d2402c\\\" -o CMakeFiles/hello.dir/src/main.cpp.o -c /home/mini/xslab/helloworld/src/main.cpp",
+  "file": "/home/mini/xslab/helloworld/src/main.cpp",
+  "output": "CMakeFiles/hello.dir/src/main.cpp.o"
+}
+]

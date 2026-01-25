@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: local('NanumSquare Neo Regular'),
+        url(NanumSquareNeo-bRg.woff2) format("woff2");
+}

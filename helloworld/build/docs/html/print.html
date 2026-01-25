@@ -1,0 +1,323 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=9" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.14.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>hello - v0.0.0</title>
+<link href="" rel="icon"/>
+<link href="" rel="apple-touch-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+<script src="doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+<script src="doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+<script src="doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+<script src="doxygen-awesome-tabs.js" type="text/javascript"></script>
+<script src="doxygen-awesome-download-pdf.js" type="text/javascript"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.topOffset = 100
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeTabs.init()
+    DoxygenAwesomeDownloadPDF.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="nanum-square-neo.css" rel="stylesheet" type="text/css"/>
+<link href="nanum-gothic-coding.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="modify.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script>
+function isMobile() {
+    return /(iPhone|iPad|Android|BlackBerry|Windows Phone)/i.test(navigator.userAgent);
+}
+$(document).ready(function() {
+    document.querySelectorAll(".header div.title[id], .header .groupheader > div[id]").forEach((node) => {
+        let titlelink = document.createElement("a")
+        titlelink.setAttribute("href", `#${node.getAttribute("id")}`)
+        titlelink.setAttribute("title", DoxygenAwesomeParagraphLink.title)
+        titlelink.classList.add("titlelink")
+        node.classList.add("title")
+        titlelink.innerHTML = DoxygenAwesomeParagraphLink.icon
+        node.appendChild(titlelink)
+    });
+})
+$(window).on('load', function () {
+    const searchParams = new URLSearchParams(window.location.search);
+    if(searchParams.has('print'))
+    {
+        window.print();
+
+        if(isMobile()) {
+            window.onfocus = function() { window.close(); }
+        }
+        else {
+            window.onafterprint = function() { window.close(); }
+        }
+    }
+})
+
+</script>
+<style>
+@media (prefers-color-scheme: dark) {
+    html:not(.light-mode) div.contents div.dyncontent svg,
+    html:not(.light-mode) div.contents center svg,
+    html:not(.light-mode) div.contents table svg,
+    html:not(.light-mode) div.contents .dotgraph svg,
+    html:not(.light-mode) div.contents .plantumlgraph svg {
+        filter: brightness(89%) hue-rotate(180deg) invert();
+    }
+}
+
+html.dark-mode div.contents div.dyncontent svg,
+html.dark-mode div.contents center svg,
+html.dark-mode div.contents table svg,
+html.dark-mode div.contents .dotgraph svg,
+html.dark-mode div.contents .plantumlgraph svg {
+    filter: brightness(89%) hue-rotate(180deg) invert();
+}
+
+div.contents div.dyncontent svg,
+div.contents center svg,
+div.contents table svg,
+div.contents .dotgraph svg {
+    color-scheme: normal;
+    max-width: 100%;
+    zoom: 85%;
+}
+
+svg a:link, svg a:visited, svg a:hover, svg a:focus, svg a:active {
+    text-decoration-line: none;
+}
+
+</style>
+
+<div class="contents" id="coverpage">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr style="height: 125px;">
+<td id="projectalign">
+<div id="projectname">hello
+        <span id="projectnumber">v0.0.0</span>
+</div>
+<div id="projectbrief">hello Project</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header">
+<div class="headertitle"><div class="title" id=toc>Table of Contents</div></div>
+</div>
+<div class="contents">
+<div id="nav-tree" style="display: block !important;">
+<ul>
+<il>
+<div class="item"><span class="label" style="padding-left: 0px;">
+    <a href=#header_0>hello</a>
+</span></div>
+<ul><il>
+<div class="item"><span class="label" style="padding-left: 16px;">
+    <a href=#overview>Overview</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 16px;">
+    <a href=#header_1>How to Build</a>
+</span></div>
+<ul class="children_ul"">
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#only-docs-build>Only Docs Build</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#release-with-debug-info-mode-build>Release With Debug Info Mode Build</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#release-mode-build>Release Mode Build</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#debug-mode-build>Debug Mode Build</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#deb-rpm-package-build>.deb, .rpm Package Build</a>
+</span></div>
+</il>
+</ul>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 16px;">
+    <a href=#header_2>Files</a>
+</span></div>
+<ul class="children_ul"">
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#header_2>File List</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 32px;">
+    <a href=#header_3>File Members</a>
+</span></div>
+<ul class="children_ul"">
+<il>
+<div class="item"><span class="label" style="padding-left: 48px;">
+    <a href=#header_3>All</a>
+</span></div>
+</il>
+<il>
+<div class="item"><span class="label" style="padding-left: 48px;">
+    <a href=#header_4>Functions</a>
+</span></div>
+</il>
+</ul>
+</il>
+</ul>
+</il>
+</ul>
+</il>
+</ul>
+</div>
+</div><!-- contents -->
+
+<div class="header">
+<div class="headertitle"><div class="title" id="header_0">hello </div></div>
+</div><div class="contents">
+
+<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<h1 class="doxsection"><a class="anchor" id="overview"></a>
+Overview</h1>
+</div></div><div class="header">
+<div class="headertitle"><div class="title" id="header_1">How to Build </div></div>
+</div><div class="contents">
+
+<div class="textblock"><p><a class="anchor" id="how-to-build"></a></p>
+<h1 class="doxsection"><a class="anchor" id="only-docs-build"></a>
+Only Docs Build</h1>
+<div class="fragment"><div class="line">./build_docs.sh</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="release-with-debug-info-mode-build"></a>
+Release With Debug Info Mode Build</h1>
+<div class="fragment"><div class="line">./build.sh</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="release-mode-build"></a>
+Release Mode Build</h1>
+<div class="fragment"><div class="line">./build.sh -DCMAKE_BUILD_TYPE=Release</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="debug-mode-build"></a>
+Debug Mode Build</h1>
+<div class="fragment"><div class="line">./build.sh -DCMAKE_BUILD_TYPE=Debug</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="deb-rpm-package-build"></a>
+.deb, .rpm Package Build</h1>
+<div class="fragment"><div class="line">(cd ./build &amp;&amp; cpack)</div>
+</div><!-- fragment --> </div></div><div class="header">
+<div class="headertitle"><div class="title" id="header_2">File List</div></div>
+</div><div class="contents">
+<div class="textblock">Here is a list of all files with brief descriptions:</div><div class="directory">
+<div class="levels">[detail level <span onclick="javascript:dynsection.toggleLevel(1);">1</span><span onclick="javascript:dynsection.toggleLevel(2);">2</span>]</div><table class="directory">
+<tr class="even" id="row_0_"><td class="entry"><span style="width:0px;display:inline-block;"> </span><span class="arrow" id="arr_0_" onclick="dynsection.toggleFolder('0_')"><span class="arrowhead opened"></span></span><span class="iconfolder" id="img_0_" onclick="dynsection.toggleFolder('0_')"><div class="folder-icon open"></div></span><a class="el"  target="_self">src</a></td><td class="desc"></td></tr>
+<tr class="odd" id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;"> </span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="#header_5" target="_self">main.cpp</a></td><td class="desc"></td></tr>
+</table>
+</div><!-- directory -->
+</div><div class="header">
+<div class="headertitle"><div class="title" id=header_3>File Members</div></div>
+</div>
+<div class="contents">
+<div class="textblock">Here is a list of all file members with links to the files they belong to:</div><ul>
+<li>main() : <a class="el" href="#ac0f2228420376f4db7e1274f2b41667c">main.cpp</a></li>
+</ul>
+</div><div class="header">
+<div class="headertitle"><div class="title" id=header_4>Functions</div></div>
+</div>
+<div class="contents">
+<div class="textblock">Here is a list of all functions with links to the files they belong to:</div><ul>
+<li>main() : <a class="el" href="#ac0f2228420376f4db7e1274f2b41667c">main.cpp</a></li>
+</ul>
+</div><div class="header">
+<div class="summary">
+<a href="#header_5_func-members">Functions</a> </div>
+<div class="headertitle"><div class="title" id="header_5">main.cpp File Reference</div></div>
+</div><div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><svg height="84pt" viewbox="0.00 0.00 89.00 84.00" width="89pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 80)">
+<title>src/main.cpp</title>
+<!-- Node1 -->
+<g class="node" id="Node000001">
+<title>Node1</title>
+<g id="a_Node000001"><a xlink:title=" ">
+<polygon fill="#999999" points="81,-76 0,-76 0,-56 81,-56 81,-76" stroke="#666666"></polygon>
+<text font-family="NanumSquare Neo Regular" font-size="10.00" text-anchor="middle" x="40.5" xml:space="preserve" y="-62.5">src/main.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node2 -->
+<g class="node" id="Node000002">
+<title>Node2</title>
+<g id="a_Node000002"><a xlink:title=" ">
+<polygon fill="#e0e0e0" points="65,-20 16,-20 16,0 65,0 65,-20" stroke="#999999"></polygon>
+<text font-family="NanumSquare Neo Regular" font-size="10.00" text-anchor="middle" x="40.5" xml:space="preserve" y="-6.5">stdio.h</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node2 -->
+<g class="edge" id="edge1_Node000001_Node000002">
+<title>Node1-&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
+<path d="M40.5,-55.59C40.5,-49.01 40.5,-39.96 40.5,-31.73" fill="none" stroke="#63b8ff"></path>
+<polygon fill="#63b8ff" points="44,-31.81 40.5,-21.81 37,-31.81 44,-31.81" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+</g>
+</svg></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="header_5_func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac0f2228420376f4db7e1274f2b41667c" id="r_ac0f2228420376f4db7e1274f2b41667c"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
+</table>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Function Documentation</h2>
+<a id="ac0f2228420376f4db7e1274f2b41667c" name="ac0f2228420376f4db7e1274f2b41667c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f2228420376f4db7e1274f2b41667c">◆ </a></span>main()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int main </td>
+<td>(</td>
+<td class="paramtype">int</td> <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char *</td> <td class="paramname"><span class="paramname"><em>argv</em></span>[] )</td>
+</tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+</div></body>
+</html>

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mini/xslab/helloworld/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

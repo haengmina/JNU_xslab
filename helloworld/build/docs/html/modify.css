@@ -1,0 +1,360 @@
+html {
+    --menu-display: none;
+    --side-nav-fixed-width: 300px;
+    --content-maxwidth: 90%;
+    --toc-max-height: calc(100vh - 2 * var(--spacing-medium) - 185px);
+
+    --font-family-org: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-family: NanumSquareNeo,var(--font-family-org);
+    --font-family-monospace: D2Coding,NanumGothicCoding,ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+
+    --side-nav-arrow-opacity: 0.3;
+    --side-nav-arrow-hover-opacity: 1;
+    --side-nav-arrow-active-opacity: 1;
+
+    /* Header-Bar, Light Mode Color */
+    --searchbar-background: var(--page-background-color);
+    --searchbar-foreground: var(--page-foreground-color);
+    --header-background: #fbfbfb;
+    --header-foreground: #2f4153;
+}
+
+html.dark-mode {
+    /* Header-Bar, Dark Mode Color */
+    --searchbar-background: var(--page-background-color);
+    --searchbar-foreground: var(--page-foreground-color);
+    --header-background: #333238;
+    --header-foreground: #d2dbde;
+}
+
+#top {
+    background-color: var(--header-background);
+    border-bottom: 0px;
+    box-shadow: 0 0 0.2rem #0000001a, 0 0.2rem 0.4rem #0003;
+    position: relative;
+    z-index: 1;
+}
+
+#side-nav, #nav-tree {
+    background: transparent;
+}
+
+#nav-path ul {
+    display: none;
+}
+
+#nav-sync {
+    top: 10px !important;
+    right: 20px !important;
+    z-index: 10;
+}
+
+#projectlogo img {
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
+}
+
+div.header {
+    page-break-before: always;
+}
+
+@media screen and (min-width: 768px) {
+    #doc-content {
+        margin-left: var(--side-nav-fixed-width)
+    }
+
+    #MSearchBox {
+        width: calc(var(--side-nav-fixed-width) - calc(2 * var(--spacing-medium)));
+    }
+
+    #MSearchField {
+        width: calc(var(--side-nav-fixed-width) - calc(2 * var(--spacing-medium)) - 65px);
+    }
+}
+
+@media screen and (min-width: 1000px), print {
+    div.contents:has(.toc.interactive) {
+        padding-right: 0px;
+    }
+}
+
+blockquote, code {
+    overflow-wrap: break-word;
+}
+
+blockquote::before, blockquote::after {
+    content: '';
+}
+
+.contents hr {
+    box-shadow: 100px 0 0 var(--separator-color),
+                -100px 0 0 var(--separator-color),
+                600px 0 0 var(--separator-color),
+                -600px 0 0 var(--separator-color),
+                1400px 0 0 var(--separator-color),
+                -1400px 0 0 var(--separator-color),
+                3000px 0 0 var(--separator-color),
+                -3000px 0 0 var(--separator-color);
+}
+
+.contents:has(.toc.interactive) hr {
+    box-shadow: 16px 0 0 var(--separator-color),
+                -100px 0 0 var(--separator-color),
+                -600px 0 0 var(--separator-color),
+                -1400px 0 0 var(--separator-color),
+                3000px 0 0 var(--separator-color),
+                -3000px 0 0 var(--separator-color)
+}
+
+/*
+  Optional All Document Print button
+*/
+doxygen-awesome-download-pdf {
+    display: inline-block;
+    margin: 0 0 0 var(--spacing-small);
+    padding: 0;
+    width: var(--searchbar-height);
+    height: var(--searchbar-height);
+    background: none;
+    border: none;
+    border-radius: var(--searchbar-height);
+    vertical-align: middle;
+    text-align: center;
+    line-height: var(--searchbar-height);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+doxygen-awesome-download-pdf > svg {
+    transition: transform var(--animation-duration) ease-in-out;
+}
+
+doxygen-awesome-download-pdf:active > svg {
+    transform: scale(.5);
+}
+
+doxygen-awesome-download-pdf:hover {
+    background-color: rgba(0,0,0,.03);
+}
+
+html.dark-mode doxygen-awesome-download-pdf:hover {
+    background-color: rgba(0,0,0,.18);
+}
+
+/*
+ Title paragraph link button
+*/
+
+a.titlelink {
+    font-size: 90%;
+    margin-left: var(--spacing-small);
+    color: var(--page-foreground-color) !important;
+    text-decoration: none;
+    opacity: .15;
+    display: none;
+    transition: opacity var(--animation-duration) ease-in-out, color var(--animation-duration) ease-in-out;
+}
+
+a.titlelink svg {
+    fill: var(--page-foreground-color);
+}
+
+div a.titlelink svg {
+    margin-bottom: -3px;
+    margin-top: -4px;
+}
+
+a.titlelink:hover {
+    opacity: .45;
+}
+
+div.title:hover a.titlelink {
+    display: inline-block;
+}
+
+.arrow {
+    font-family: "Lucida Grande",Verdana,Geneva,Arial,sans-serif;
+}
+
+#nav-tree-contents {
+    margin-top: 4px
+}
+
+#nav-tree div.item.selected .arrow {
+    opacity: var(--side-nav-arrow-active-opacity);
+}
+
+#nav-tree div.item:has(.index\.html) .arrow {
+    opacity: 0;
+}
+
+.plantumlgraph {
+    max-width: 100%;
+    overflow-x: overlay;
+}
+
+.plantumlgraph .caption {
+    position: sticky;
+    left: 0;
+}
+
+li> .plantumlgraph {
+    text-align: unset;
+}
+
+.contents .plantumlgraph::-webkit-scrollbar {
+    background: transparent;
+    width: calc(var(--webkit-scrollbar-size) + var(--webkit-scrollbar-padding) + var(--webkit-scrollbar-padding));
+    height: calc(var(--webkit-scrollbar-size) + var(--webkit-scrollbar-padding) + var(--webkit-scrollbar-padding));
+}
+
+.contents .plantumlgraph::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: var(--webkit-scrollbar-padding) solid transparent;
+    border-radius: calc(var(--webkit-scrollbar-padding) + var(--webkit-scrollbar-padding));
+    background-clip: padding-box;  
+}
+
+.contents .plantumlgraph:hover::-webkit-scrollbar-thumb {
+    background-color: var(--webkit-scrollbar-color);
+}
+
+.contents .plantumlgraph::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.contents .plantumlgraph {
+    scrollbar-width: thin;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.light-mode) div.contents .plantumlgraph iframe {
+        filter: brightness(89%) hue-rotate(180deg) invert();
+    }
+}
+
+html.dark-mode div.contents .plantumlgraph iframe
+{
+    filter: brightness(89%) hue-rotate(180deg) invert();
+}
+
+h1, h2, h3, h4, h5,
+#projectname,
+#nav-tree .selected a,
+div.header .title,
+.paramname, .paramname em,
+table.params .paramname,
+th.markdownTableHeadLeft,
+th.markdownTableHeadRight,
+th.markdownTableHeadCenter,
+th.markdownTableHeadNone,
+table.doxtable th,
+table.fieldtable th,
+.tabs-overview button.tab-button .tab-title::before,
+.tabs-overview button.tab-button.active .tab-title {
+    font-weight: bold;
+}
+
+.section_buttons tr td.markdownTableBodyLeft a::before,
+.section_buttons tr td.markdownTableBodyRight a::after {
+    font-family: var(--font-family-org);
+}
+
+#projectlogo {
+    padding-bottom: 5px;
+}
+
+#projectalign {
+    padding-left: 0.5em;
+
+    #projectname {
+        white-space: normal;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    #projectbrief {
+        padding-bottom: 5px;
+    }    
+}
+
+@media print {
+    @page { 
+        size: A4;
+        margin: 1cm 1cm;
+
+        @bottom-center {
+            content: "";
+        }
+    }
+
+    * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    html {
+        --content-maxwidth: auto;
+        --toc-max-height: auto;
+    }
+    body {
+        zoom: 80%;
+    }
+    blockquote {
+        overflow: hidden;
+    }
+
+    #coverpage {
+        top: 250px;
+        position: relative;
+    }
+
+    #nav-tree {
+        border-right: 0px;
+    }
+
+    #projectname {
+        font-size: 44px;
+        white-space: normal;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        line-height: 1.2;
+    }
+
+    #projectbrief {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        font-size: 22px;
+        line-height: 1.1;
+    }
+
+    #projectnumber {
+        padding-left: 3px;
+    }
+
+    #projectlogo img {
+        max-height: 125px;
+        margin-right: var(--spacing-large);
+    }
+
+    .plantumlgraph object, .dotgraph object, .center iframe {
+        max-width: 100%;
+    }
+
+    .center iframe {
+        zoom: 130%;
+    }
+
+    .directory .levels, .section_buttons {
+        display: none;
+    }
+
+    div.fragment .line, pre.fragment {
+        white-space: pre-wrap;
+    }
+}

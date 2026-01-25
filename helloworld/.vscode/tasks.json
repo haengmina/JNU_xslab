@@ -1,0 +1,68 @@
+{
+    "inputs": [
+        {
+            "args": {
+                "description": "Remote Target Login Info For File Transfer",
+                "id": "remote_launch_target",
+                "placeholder": "user@host"
+            },
+            "command": "memento.promptString",
+            "id": "remote_launch_target",
+            "type": "command"
+        }
+    ],
+    "tasks": [
+        {
+            "command": [
+                "mkdir -p /tmp/${command:cmake.activeFolderName}",
+                "&&",
+                "find ${command:cmake.launchTargetDirectory} -name \"*.so\" -type f -exec cp \"{}\" /tmp/${command:cmake.activeFolderName}/ \\;",
+                "&&",
+                "cp ${command:cmake.launchTargetPath} /tmp/${command:cmake.activeFolderName}",
+                "&&",
+                "scp -r /tmp/${command:cmake.activeFolderName} ${input:remote_launch_target}:/tmp/"
+            ],
+            "label": "File Transfer",
+            "type": "shell"
+        },
+        {
+            "command": [
+                "${workspaceFolder}/build_docs.sh"
+            ],
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            },
+            "label": "Generate Documentation (HTML, PDF)",
+            "presentation": {
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "reveal": "always",
+                "showReuseMessage": true
+            },
+            "type": "shell"
+        },
+        {
+            "command": [
+                "SKIP_PDF=1 ${workspaceFolder}/build_docs.sh"
+            ],
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            },
+            "label": "Generate Documentation (HTML)",
+            "presentation": {
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "reveal": "always",
+                "showReuseMessage": true
+            },
+            "type": "shell"
+        }
+    ],
+    "version": "2.0.0"
+}

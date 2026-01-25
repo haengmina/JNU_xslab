@@ -1,0 +1,9 @@
+Architecture: amd64
+Depends: systemd
+Description: hello Project
+Maintainer: KJW
+Package: hello
+Priority: optional
+Section: devel
+Version: 0.0.0
+Installed-Size: 30

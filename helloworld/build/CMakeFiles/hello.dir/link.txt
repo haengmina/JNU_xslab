@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-demangle,-Map,/home/mini/xslab/helloworld/build/hello.map CMakeFiles/hello.dir/src/main.cpp.o -o hello   -L/home/mini/xslab/helloworld/lib/x86_64

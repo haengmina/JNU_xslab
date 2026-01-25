@@ -1,0 +1,175 @@
+{
+    "configurations": [
+        {
+            "MIMode": "gdb",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                }
+            ],
+            "externalConsole": false,
+            "name": "(gdb) Launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "stopAtEntry": true,
+            "type": "cppdbg"
+        },
+        {
+            "MIMode": "gdb",
+            "name": "(gdb) Attach",
+            "processId": "${command:pickProcess}",
+            "program": "${command:cmake.launchTargetPath}",
+            "request": "attach",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "type": "cppdbg"
+        },
+        {
+            "MIMode": "gdb",
+            "coreDumpPath": "${input:core_file_path}",
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                }
+            ],
+            "name": "(gdb) Core Dump Debug",
+            "program": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "type": "cppdbg"
+        },
+        {
+            "MIMode": "gdb",
+            "args": [],
+            "cwd": "/tmp/${command:cmake.activeFolderName}/",
+            "externalConsole": false,
+            "name": "(gdb) Remote Launch",
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeArgs": [
+                    "${input:remote_launch_target}"
+                ],
+                "pipeCwd": "/usr/bin",
+                "pipeProgram": "/usr/bin/ssh"
+            },
+            "preLaunchTask": "File Transfer",
+            "program": "/tmp/${command:cmake.activeFolderName}/${command:cmake.launchTargetFilename}",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "stopAtEntry": true,
+            "type": "cppdbg"
+        },
+        {
+            "MIMode": "gdb",
+            "name": "(gdb) Remote Attach",
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeArgs": [
+                    "user@host"
+                ],
+                "pipeCwd": "/usr/bin",
+                "pipeProgram": "/usr/bin/ssh"
+            },
+            "processId": "${command:pickRemoteProcess}",
+            "program": "${input:remote_attach_program_path}",
+            "request": "attach",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "type": "cppdbg"
+        },
+        {
+            "MIMode": "gdb",
+            "cwd": "${workspaceRoot}",
+            "externalConsole": false,
+            "miDebuggerPath": "gdb-multiarch",
+            "miDebuggerServerAddress": " ${input:gdb_server_address}",
+            "name": "(gdb server) Connect",
+            "program": "${command:cmake.getLaunchTargetPath}",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "stopAtEntry": true,
+            "type": "cppdbg"
+        }
+    ],
+    "inputs": [
+        {
+            "args": {
+                "description": "Remote Target Login Info",
+                "id": "remote_launch_target",
+                "placeholder": "user@host"
+            },
+            "command": "memento.promptString",
+            "id": "remote_launch_target",
+            "type": "command"
+        },
+        {
+            "args": {
+                "description": "Remote Debugging Program Path",
+                "id": "remote_attach_program_path"
+            },
+            "command": "memento.promptString",
+            "id": "remote_attach_program_path",
+            "type": "command"
+        },
+        {
+            "args": {
+                "description": "Core Dump File Path",
+                "id": "core_file_path"
+            },
+            "command": "memento.promptString",
+            "id": "core_file_path",
+            "type": "command"
+        },
+        {
+            "args": {
+                "description": "Target gdbserver",
+                "id": "gdb_server_address",
+                "placeholder": "host:port"
+            },
+            "command": "memento.promptString",
+            "id": "gdb_server_address",
+            "type": "command"
+        }
+    ],
+    "version": "0.2.0"
+}

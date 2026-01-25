@@ -1,0 +1,11 @@
+/home/mini/xslab/helloworld/build/CMakeFiles/doxygen_hello.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/hello.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/hello_LIST.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/package.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/package_source.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/edit_cache.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/rebuild_cache.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/list_install_components.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/install.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/install/local.dir
+/home/mini/xslab/helloworld/build/CMakeFiles/install/strip.dir

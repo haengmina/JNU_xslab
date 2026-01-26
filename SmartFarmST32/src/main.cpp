@@ -216,7 +216,7 @@ int main()
 		}
 
 #endif
-	use_sensor(1, 23, 0, 33);				//온도/습도
+	use_sensor(1, 23, 0, 33);//온도/습도
 
 	//float H_mV1 = Sensor_Interface_Board::get_Voltage_mV(0);
 	//float H_mV12=H_mV1*100.0f/3000.0f;

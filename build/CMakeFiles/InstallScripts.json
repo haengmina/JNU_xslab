@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mini/xslab/build/cmake_install.cmake",
+		"/home/mini/xslab/build/lib/stm32g0-hal/cmake_install.cmake",
+		"/home/mini/xslab/build/lib/segger-rtt/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

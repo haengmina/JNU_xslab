@@ -155,6 +155,7 @@ void Sensor_Interface_Board::init()
 	set_Power_Output(true);
 	set_Interface_Mode(0, INTERFACE_MODE::RS232);
 	set_Interface_Mode(1, INTERFACE_MODE::RS232);
+	
 }
 
 void Sensor_Interface_Board::set_Power_Output(bool enable)

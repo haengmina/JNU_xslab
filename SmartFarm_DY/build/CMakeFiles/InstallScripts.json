@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mini/xslab/SmartFarm_DY/build/cmake_install.cmake",
+		"/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal/cmake_install.cmake",
+		"/home/mini/xslab/SmartFarm_DY/build/lib/segger-rtt/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -191,6 +191,7 @@ private:
 	static constexpr uint16_t relay_led_pos = 0x00E0;
 	static uint32_t last_rx_tick_ms[uart_channel_count];
 	static uint16_t led_value;
+	static bool power_12v_enabled;								// RS-485 통신 위해 추가
 	static Protocol::Interface::Setting_Buffer uart_setting[uart_channel_count];
 
 	static GPIO_Init_Info power_relay_info[];

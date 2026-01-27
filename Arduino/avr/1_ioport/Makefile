@@ -14,6 +14,7 @@ AVR_MCU = atmega328p
 PROGRAMMER = usbasp
 F_CPU = 16000000UL
 
+
 all:
 	$(CC) -Wall -Os -DF_CPU=$(F_CPU) -mmcu=$(AVR_MCU) -o $(SRC).elf $(SRC).c
 	$(OBJCOPY) -j .text -j .data -O ihex $(SRC).elf $(SRC).hex

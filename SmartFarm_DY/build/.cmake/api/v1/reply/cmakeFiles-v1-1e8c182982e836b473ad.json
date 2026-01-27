@@ -1,0 +1,1579 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/include/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/include/board_io.h",
+				"/home/mini/xslab/SmartFarm_DY/include/checksum.h",
+				"/home/mini/xslab/SmartFarm_DY/include/control_interface_board.h",
+				"/home/mini/xslab/SmartFarm_DY/include/firmware_manager.h",
+				"/home/mini/xslab/SmartFarm_DY/include/gps_parser.h",
+				"/home/mini/xslab/SmartFarm_DY/include/mxc6655.h",
+				"/home/mini/xslab/SmartFarm_DY/include/onboard_packet_handler.h",
+				"/home/mini/xslab/SmartFarm_DY/include/packet_manager.h",
+				"/home/mini/xslab/SmartFarm_DY/include/protocol.h",
+				"/home/mini/xslab/SmartFarm_DY/include/sensor_interface_board.h",
+				"/home/mini/xslab/SmartFarm_DY/include/stm32g0xx_hal_conf.h",
+				"/home/mini/xslab/SmartFarm_DY/include/stm32g0xx_it.h",
+				"/home/mini/xslab/SmartFarm_DY/include/system_config.h",
+				"/home/mini/xslab/SmartFarm_DY/include/tla2528.h",
+				"/home/mini/xslab/SmartFarm_DY/include/util.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include/SEGGER_RTT.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include/SEGGER_RTT_Conf.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/*.c*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_Syscalls_GCC.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_printf.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/*.c*",
+			"paths" : [],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/*.s",
+			"paths" : [],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include/stm32g0b1xx.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include/stm32g0c1xx.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_armcc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_armclang.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_armclang_ltm.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_compiler.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_gcc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_iccarm.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/cmsis_version.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_armv81mml.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_armv8mbl.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_armv8mml.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm0.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm0plus.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm1.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm23.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm3.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm33.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm35p.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm4.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_cm7.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_sc000.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/core_sc300.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/mpu_armv7.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/mpu_armv8.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include/tz_context.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/*.c*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_fdcan.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/*.s",
+			"paths" : [],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_crc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_crc_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dac.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dac_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_fdcan.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_cortex.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crs.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dac.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_i2c.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_lpuart.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rtc.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_usart.h",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_utils.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy/*.h*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/*.c*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/stm32g0xx_hal_msp.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/stm32g0xx_it.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/syscalls.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/sysmem.c",
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/system_stm32g0xx.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/*.s",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/startup_stm32g0c1ketx.s"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/src/*.c*",
+			"paths" : 
+			[
+				"/home/mini/xslab/SmartFarm_DY/src/board_io.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/checksum.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/control_interface_board.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/firmware_manager.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/gps_parser.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/main.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/mxc6655.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/onboard_packet_hadnler.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/packet_manager.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/protocol.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/sensor_interface_board.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/stm32g0xx_hal_msp.c",
+				"/home/mini/xslab/SmartFarm_DY/src/stm32g0xx_it.c",
+				"/home/mini/xslab/SmartFarm_DY/src/system_config.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/tla2528.cpp",
+				"/home/mini/xslab/SmartFarm_DY/src/util.cpp"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/mini/xslab/SmartFarm_DY/src/*.s",
+			"paths" : [],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake"
+		},
+		{
+			"path" : "toolchain/arm-none-eabi-gcc.cmake"
+		},
+		{
+			"path" : "toolchain/toolchain_common.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeSystem.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.2.1/CMakeSystem.cmake"
+		},
+		{
+			"path" : "toolchain/arm-none-eabi-gcc.cmake"
+		},
+		{
+			"path" : "toolchain/toolchain_common.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeUnixFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Bruce-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Compaq-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/HP-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/LCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SDCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SunPro-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XL-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XLClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Bruce-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Compaq-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/HP-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/LCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SDCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SunPro-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XL-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XLClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.2.1/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/HP-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/HP-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCXXCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeInspectCLinker.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCCompiler.cmake.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeInspectCXXLinker.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCXXCompiler.cmake.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeASMCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.2.1/CMakeASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeASMInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU-ASM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeTestASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeASMLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/Internal/CMakeInspectASMLinker.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CMakeASMCompiler.cmake.in"
+		},
+		{
+			"path" : "Common.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"path" : "extra/package/preinst.in"
+		},
+		{
+			"path" : "extra/package/postinst.in"
+		},
+		{
+			"path" : "extra/package/prerm.in"
+		},
+		{
+			"path" : "extra/package/postrm.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindDoxygen.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "extra/doxygen/Doxyfile.in"
+		},
+		{
+			"path" : "lib/stm32g0-hal/CMakeLists.txt"
+		},
+		{
+			"path" : "lib/stm32g0-hal/Common.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindDoxygen.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-4.2/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "lib/stm32g0-hal/extra/doxygen/Doxyfile.in"
+		},
+		{
+			"path" : "lib/segger-rtt/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/mini/xslab/SmartFarm_DY/build",
+		"source" : "/home/mini/xslab/SmartFarm_DY"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

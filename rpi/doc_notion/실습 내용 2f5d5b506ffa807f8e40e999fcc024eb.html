@@ -1,0 +1,794 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>실습 내용</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2f5d5b50-6ffa-807f-8e40-e999fcc024eb" class="page sans"><header><h1 class="page-title" dir="auto">실습 내용</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8054-87d6-f185de15db08" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2f5d5b50-6ffa-8069-b0e9-d887acca5c92" class="image"><a href="image.png"><img style="width:709.96875px" src="image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-809d-b26d-d6e3de4bee5b" class="">
+</p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">docs/</summary><div class="indented"><div style="display:contents" dir="auto"><div style="display:contents" dir="auto"><div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">01_Protocol.md</summary><div class="indented"><div style="display:contents" dir="auto"><h2 id="2e9d5b50-6ffa-80d6-9a8d-f9840cbd7616" class="">‘통합 제어기’ ←→ ‘센서/제어 노드’ 간의 통신 Protocol</h2></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-8041-ae74-e103b488288c" class="">Flow chart</h3></div><div style="display:contents" dir="ltr"><figure id="2e9d5b50-6ffa-8079-919f-ef2bdbaa6fec" class="image"><a href="image%201.png"><img style="width:681.984375px" src="image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-809f-bc3e-e4e866f29db9" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80a0-8530-d35ff19eed7f" class="">Transaction</h3></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-800a-9fca-c3336938a1fa" class="">노드 선택 → 요청 → 응답 → 노드 선택 해제 까지가 하나의 트랜잭션.</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8090-be2c-d7fd88ebc2b1" class="">시스템의 신뢰성과 동시성을 관리. “하나의 트랜잭션에서 하나의 Request 및 Response만 허용”. 복잡성을 줄이고 예측 가능한 동작을 보장. 제어기는 노드 응답 후 다음 노드로 넘어갈 수 있으므로, 제어기가 여러 노드를 순차적으로 처리하는 Master - Slave 방식.</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8031-a875-c9b1481ced61" class="">센서/노드 1 작업 완료 후 센서/노드 2 작업 수행.</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-8005-a67d-ed611711c50b" class="">제한 사항</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80eb-ab85-c3d6fa559bb1" class="bulleted-list"><li style="list-style-type:disc">‘한 번에 하나의 노드와 통신 가능’ : 전형적인 RS485 Multi-drop 환경의 제약. 버스에 여러 장치를 연결할 수 있지만, 동시에 말할 수는 없음.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80b1-8d00-c79ce57b2178" class="bulleted-list"><li style="list-style-type:disc">‘노드가 선택된 상태에서 Request를 전송하지 않고 다른 노드를 선택하는 경우 기존 노드의 선택 취소’ : 제어기가 노드 선택을 ‘취소’하는 명시적인 명령어는 없으므로, 다른 노드를 선택하면 자동으로 이전의 노드는 해제.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80e1-8a4a-c24946dfe69d" class="bulleted-list"><li style="list-style-type:disc">‘Byte 수신 후 다음 Byte는 100ms 이내에 수신 되어야 함.’ : 패킷의 무결성을 위한 타임아웃 조건. 데이터 전송 중 일정 시간 내 다음 바이트가 오지 않으면, 노드는 수신 중단으로 간주, 버퍼를 비우는 등의 에러 처리 로직 진행.</li></ul></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-8068-8374-d21b25fa41a1" class="">통신 정보</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80cf-bc39-f9c84f9d0d3f" class="bulleted-list"><li style="list-style-type:disc">통신 커넥터 : RJ45는 이더넷 케이블에 사용되는 커넥터이지만, 여기서는 RS485 통신에 사용. 임베디드/산업 현장에서 RS485는 장거리, 노이즈 내성에 강하여 많이 사용.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8093-8643-f93a767881de" class="bulleted-list"><li style="list-style-type:disc">전기적 규격 : RS485는 차동 신호를 사용해 노이즈에 강하고, 최대 수십 개의 장치가 하나의 버스에 연결.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-807c-b1be-cd22f47071b5" class="bulleted-list"><li style="list-style-type:disc">바이트 프로토콜 : UART (19200 bps, 8 bit, no parity, stop bit : 1). 직렬 통신<div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8063-bd88-f8040dbe11f6" class="bulleted-list"><li style="list-style-type:circle">19200 bps : 통신 속도</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80b7-9e9c-c8cdf8c02fb6" class="bulleted-list"><li style="list-style-type:circle">8 bit : 한 바이트의 데이터 비트 수</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-801c-9636-ee5e37bad662" class="bulleted-list"><li style="list-style-type:circle">no parity : 데이터 오류 검출을 위한 패리티 비트 사용 안 함</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-802d-9a08-c86199d9edd9" class="bulleted-list"><li style="list-style-type:circle">stop bit 1 : 데이터 전송의 끝을 알리는 스톱 비트 1개</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80dc-b084-f53bc7a7b8ad" class="">Command List</h3></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80b9-bee8-cb3e29a3ee65" class="">모든 Reqest, Response 명령어의 코드와 설명 나열.</p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>공통 Request</strong></summary><div class="indented"><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8093-aaff-e55a32e81843" class=""><strong>제어 노드 및 센서 노드에서 사용할 수 있는</strong> 명령입니다</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8027-b275-dcafdb7220f0" class="bulleted-list"><li style="list-style-type:disc"><code>NODE_SELECT_REQUEST:</code> 0x20</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80c9-ae90-dd21f95cf6d5" class="">통합제어기에서 Transaction을 시작하기 위해, <strong>node 선택</strong>하는 용도로 사용됩니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80b1-ba8c-fe02fe558d8d" class="bulleted-list"><li style="list-style-type:disc"><code>ACCEL_READ:</code> 0x90</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8021-959f-d47bc7e8c518" class="">3축 가속도 센서의 값을 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8054-ade8-d34547db9d82" class="bulleted-list"><li style="list-style-type:disc"><code>GPS_READ:</code> 0x92</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8012-b8d2-d222cb135916" class=""><strong>GPS</strong> 데이터를 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8085-9956-e1060c17a9c1" class="bulleted-list"><li style="list-style-type:disc"><code>FIRMWARE_VERSION_READ:</code> 0xA0</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8049-99e6-fb23130878ab" class=""><strong>Firmware의 버전</strong> 정보를 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-802a-92cf-f3c1b394d25f" class="bulleted-list"><li style="list-style-type:disc"><code>FIRMWARE_REQUEST:</code> 0xA3</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-806d-8ca9-e215d802666d" class=""><strong>새로운 Firmware 데이터</strong>를 쓰는 명령입니다</blockquote></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Control Interface Board 전용 Request</strong></summary><div class="indented"><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8036-893a-f4fc9583b867" class=""><strong>제어 노드에서만 사용할 수 있는</strong> 명령입니다</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8030-9e8a-d58716f5977e" class="bulleted-list"><li style="list-style-type:disc"><code>DI_READ:</code> 0x30</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8019-b630-fea99fdfc890" class="">DI (<strong>Digital Input</strong>)의 상태를 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-809f-9c25-e106f2229569" class="bulleted-list"><li style="list-style-type:disc"><code>DI_THRESHOLD_WRITE:</code> 0x31</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8060-98eb-de7a9618b62e" class="">DI (Digital Input)의 Logic <strong>High</strong>로 인식하는 Threshold를 설정하는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-802f-9e21-d7a74ec6c7e4" class="bulleted-list"><li style="list-style-type:disc"><code>DO_READ:</code> 0x32</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8039-a3da-e8a51f563bc7" class="">DO (<strong>Digital Output</strong>)의 상태를 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80aa-8bdc-cb856636a938" class="bulleted-list"><li style="list-style-type:disc"><code>DO_WRITE:</code> 0x33</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-806a-9bb4-d72931c840ba" class="">DO (<strong>Digital Output</strong>)의 상태를 설정하는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80a2-ba00-e3326feb0b3d" class="bulleted-list"><li style="list-style-type:disc"><code>DI_DO_READ_ALL:</code> 0x42</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80ad-b904-d2d79f668b65" class="">모든 DI (<strong>Digital Input</strong>) 및 DO (<strong>Digital Output</strong>)의 상태를 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800e-9365-dfcd8eade4e9" class="bulleted-list"><li style="list-style-type:disc"><code>DO_WRITE_ALL:</code> 0x44</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80e6-ba48-dfe563f2a581" class="">모든 DO (<strong>Digital Output)</strong>의 상태를 설정하는 명령입니다</blockquote></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Sensor Interface Board 전용 Request</strong></summary><div class="indented"><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-809b-8375-c7faa258fbd1" class=""><strong>센서 노드에서만 사용할 수 있는</strong> 명령입니다</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800c-93e7-d42083b994b2" class="bulleted-list"><li style="list-style-type:disc"><code>ANALOG_READ:</code> 0x50</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8051-b0ad-d4e7ac4567b1" class="">AV (Analog Voltage) 및 AI (Analog Current)의 값을 읽는 명령 입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8005-969d-f66e9dea5a4c" class="bulleted-list"><li style="list-style-type:disc"><code>ANALOG_READ_ALL:</code> 0x51</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8022-b4a1-ca3388b6bee9" class="">모든 AV (Analog Voltage) 및 AI (Analog Current)의 값을 읽는 명령 입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80d6-815c-c50fc5cb800d" class="bulleted-list"><li style="list-style-type:disc"><code>SERIAL_SETUP:</code> 0x70</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8004-b7e1-d35b5cd9e602" class="">DB9 커넥터의 통신 설정을 변경하는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8052-a908-e839a7f71ec4" class="bulleted-list"><li style="list-style-type:disc"><code>SERIAL_SETUP_READ:</code> 0x71</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8049-81b9-fa91c8813289" class="">DB9 커넥터의 통신 설정을 읽는 명령입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8031-815f-cb2481fccc63" class="bulleted-list"><li style="list-style-type:disc"><code>SERIAL_WRITE:</code> 0x80</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80a4-bcad-f6b35767d8fd" class="">DB9 커넥터를 통해 지정된 데이터를 쓰고, 응답을 읽는 명령입니다</blockquote></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Response</strong></summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80a1-9e19-daefac52339d" class="bulleted-list"><li style="list-style-type:disc"><code>NODE_SELECT_RESPONSE:</code> 0x21</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-807d-840d-f9dad5c3cacd" class="">NODE_SELECT_REQUEST에서 지정된 Serial Number와 현재 노드의 Serial Number가 일치하는 경우에 전송되는 Response입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80d1-8167-c475d1f6f9f8" class="bulleted-list"><li style="list-style-type:disc"><code>ERROR_INVALID_REQUEST:</code> 0x22</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8008-9745-cf94b9b0a6ff" class="">현재 구성에서 사용할 수 없는 명령을 수신한 경우 전송되는 Response입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8003-a2bb-c53b57723040" class="bulleted-list"><li style="list-style-type:disc"><code>REQUEST_FAILED:</code> 0x23</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-801c-97e3-cb72bafce4b1" class="">유효하지 않은 Request Packet을 수신한 경우 전송되는 Response입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-805f-b025-f0179c4c06fd" class="bulleted-list"><li style="list-style-type:disc"><code>REQUEST_SUCCESS:</code> 0x24</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-802b-990f-f9ea6d3f40fc" class="">Request가 정상적으로 처리된 경우 전송되는 Response입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8020-9d1c-ff5d68db5320" class="bulleted-list"><li style="list-style-type:disc"><code>DI_RESPONSE:</code> 0x40</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8093-8fdd-f9ef56016cd4" class="">DI_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8057-a65c-fef624177e5f" class="bulleted-list"><li style="list-style-type:disc"><code>DO_RESPONSE:</code> 0x41</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80bf-897a-ed91f68786af" class="">DO_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8069-8959-db0cf071c926" class="bulleted-list"><li style="list-style-type:disc"><code>DI_DO_READ_ALL_RESPONSE:</code> 0x43</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80df-b42d-d714c5c4346b" class="">DI_DO_READ_ALL에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8003-9d55-f19d404c9713" class="bulleted-list"><li style="list-style-type:disc"><code>ANALOG_RESPONSE:</code> 0x60</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-800e-8931-e138c85dcc8c" class="">ANALOG_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80db-8b1e-ebcf1cf14881" class="bulleted-list"><li style="list-style-type:disc"><code>ANALOG_ALL_RESPONSE:</code> 0x61</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8028-9f9b-ddc7af1293c9" class="">ANALOG_READ_ALL에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80e5-88df-e184fc50204b" class="bulleted-list"><li style="list-style-type:disc"><code>SERIAL_WRITE_RESPONSE:</code> 0x81</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80f7-bee1-c58f0aa91ffc" class="">SERIAL_WRITE에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8074-9bc4-d9c29080dcdc" class="bulleted-list"><li style="list-style-type:disc"><code>SERIAL_SETUP_READ_RESPONSE:</code> 0x82</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-809f-a0f8-dea8d86defeb" class="">SERIAL_SETUP_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80fa-bf9b-e5e6ea5a66b2" class="bulleted-list"><li style="list-style-type:disc"><code>ACCEL_RESPONSE:</code> 0x91</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-8052-bb16-e3ec08c49ef6" class="">ACCEL_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80e5-8d80-c8943c2d1b13" class="bulleted-list"><li style="list-style-type:disc"><code>GPS_RESPONSE:</code> 0x93</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-800f-a67b-fef8416321ab" class="">GPS_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8001-87bf-f9fa4de59218" class="bulleted-list"><li style="list-style-type:disc"><code>FIRMWARE_VERSION_RESPONSE:</code> 0xA1</li></ul></div><div style="display:contents" dir="auto"><blockquote id="2e9d5b50-6ffa-80e7-afb1-f0289ec66804" class="">FIRMWARE_VERSION_READ에 대한 Respone입니다</blockquote></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80ed-a0af-ed540ef382df" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80b5-bb3e-e1a6360db3ef" class="">
+</p></div></div></details></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8077-ade8-c4b14f54eb05" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2e9d5b50-6ffa-807a-8d66-d20253add9f5"/></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80aa-a83d-fe4cd9272012" class="">Packet Format</h3></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8012-b526-cfda9282a155" class="">모든 통신의 기본 구조</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8027-9ea0-f4f7c82a8dd3" class="bulleted-list"><li style="list-style-type:disc">Start Byte (0x7E) : 패킷의 시작을 알리는 고정된 값. 패킷 동기화에 사용</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8004-8d65-e525da36cfea" class="bulleted-list"><li style="list-style-type:disc">Command Type : 어떤 명령인지 식별하는 ID</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80ec-b07d-da4ac5add54c" class="bulleted-list"><li style="list-style-type:disc">Data Length : Data 필드의 실제 길이(N byte). 패킷의 끝을 예측하는데 사용</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80a4-ae27-e1f394860b67" class="bulleted-list"><li style="list-style-type:disc">Data : 실제 명령의 내용이나 요청/응답 데이터가 들어가는 가변 길이 필드</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8018-bfdf-fb02eaa73cb6" class="bulleted-list"><li style="list-style-type:disc">XOR Checksum : Start Byte ~ Data 영역까지의 모든 바이트를 XOR 연산해 계산된 값. 데이터 전송 중 발생할 수 있는 오류 검출. 0x00부터 누적 XOR 연산 수행.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800e-9154-ede41960f8e1" class="bulleted-list"><li style="list-style-type:disc">Endianness : LSB First (Little Endian)</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800b-b2a3-f261ce84fde9" class="bulleted-list"><li style="list-style-type:disc">Data Length는 1byte로, 0 ~ 255까지 표현 가능. 따라서, Data 필드가 가질 수 있는 최대 길이는 255 byte이다. 만약, 전송해야 할 데이터가 255 바이트를 초과하면, 해당 데이터는 여러 개의 패킷으로 쪼개서(Fragmentation) 전송. 업데이트 같은 큰 데이터 전송 시에는 여러 패킷으로 나눠서 순차적으로 전송.</li></ul></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80db-9716-c4c43bb1918c" class="">
+</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e9d5b50-6ffa-80d1-b874-e4b8a8ff460f" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">/*!
+ * @code
+ * Packet Format
+ *
+ * [0] : Start Byte (0x7E)
+ * [1] : Command Type
+ * [2] : Data Length
+ * [3 ~ N - 1] : Data
+ * [N] : XOR Checksum
+ *
+ * |  7  |  6  |  5  |  4  |  3  |  2  |  1  |  0  |
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * |                  Start Byte                   | [0]
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * |                    Command                    | [1]
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * |                  Data Length                  | [2]
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * |                                               | [3]
+ * ~                      Data                     ~
+ * |                                               | [N - 1]
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * |                 XOR Checksum                  | [N]
+ * +-----+-----+-----+-----+-----+-----+-----+-----+----
+ * Command List
+ * - NODE_SELECT_REQUEST = 0x20
+ * - NODE_SELECT_RESPONSE = 0x21
+ * - ERROR_INVALID_REQUEST = 0x22
+ * - REQUEST_FAILED = 0x23
+ * - REQUEST_SUCCESS = 0x24
+ * - DI_READ = 0x30
+ * - DI_THRESHOLD_WRITE = 0x31
+ * - DO_READ = 0x32
+ * - DO_WRITE = 0x33
+ * - DI_RESPONSE = 0x40
+ * - DO_RESPONSE = 0x41
+ * - DI_DO_READ_ALL = 0x42
+ * - DI_DO_READ_ALL_RESPONSE = 0x43
+ * - DO_WRITE_ALL = 0x44
+ * - ANALOG_READ = 0x50
+ * - ANALOG_READ_ALL = 0x51
+ * - ANALOG_RESPONSE = 0x60
+ * - ANALOG_ALL_RESPONSE = 0x61
+ * - SERIAL_SETUP = 0x70
+ * - SERIAL_SETUP_READ = 0x71
+ * - SERIAL_WRITE = 0x80
+ * - SERIAL_WRITE_RESPONSE = 0x81
+ * - SERIAL_SETUP_READ_RESPONSE = 0x82
+ * - ACCEL_READ = 0x90
+ * - ACCEL_RESPONSE = 0x91
+ * - GPS_READ = 0x92
+ * - GPS_RESPONSE = 0x93
+ * - FIRMWARE_VERSION_READ = 0xA0
+ * - FIRMWARE_VERSION_RESPONSE = 0xA1
+ * - FIRMWARE_REQUEST = 0xA2
+ * @code
+ */</code></pre></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-807c-aaf4-e1f272d6a841" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8062-b185-eeb2c6d5256d" class="">
+</p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">02_Command_list.md</summary><div class="indented"><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-805e-9329-f2e1a11fcf5b" class="">Node Select, Sensor Read, Digital I/O 등 각 기능별 명령어와 그에 대한 응답 패킷의 data 필드가 어떤 구조로 구성되는지 정의한 기술 명세서.</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-807f-a73b-dd3a6655bab3" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80fa-93e3-f0bf0fc122bf" class="">일반 명령</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80eb-9bbb-d72df8f717ce" class="bulleted-list"><li style="list-style-type:disc">Node Select : 8byte 고유 시리얼 번호를 사용해 노드 지정.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8046-ac39-e0f2e8d8c03b" class="bulleted-list"><li style="list-style-type:disc">Accelerometer Read : Roll, Pitch → float. 단위는 degree. </li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80eb-b372-dbf0141f9741" class="bulleted-list"><li style="list-style-type:disc">GPS Read : 위도/경도를 double로 사용해 더 높은 정밀도 확보. Position Fix Flag는 현재 GPS 데이터가 유효한지 알려주는 상태 값.</li></ul></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80e1-89aa-d3f826553f66" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80bc-b107-d00c5e57eac0" class="">제어 노드 전용 명령 (Digital I/O)</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8051-a744-cd8fbff8f941" class="bulleted-list"><li style="list-style-type:disc">DI(Digital Input) / DO(Digital Output) : 스위치 상태를 읽거나(DI), 릴레이나 LED를 켜고 끄는(DO) 등 제어에 기본이 되는 기능.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8040-97db-cec53de2ca4d" class="bulleted-list"><li style="list-style-type:disc">DI_READ vs DI_DO_READ_ALL : 특정 채널만 필요할 때는 DI_READ로 가볍게 통신, 모든 상태를 모니터링할 때는 DI_DO_READ_ALL로 여러 번의 트랜잭션 오버헤드 없이 효율적으로 데이터 통신.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800d-ac1d-f93b6eae5fa6" class="bulleted-list"><li style="list-style-type:disc">DO_WRITE Response : REQUEST_SUCCESS (0x24)만 오고, 상태를 돌려주지 않음. ‘명령과 조회는 분리’한다는 원칙에 따른 것. 상태 변경 후 확인이 필요하면 별도로 DO_READ를 다시 요청해야 함.</li></ul></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-803c-bf68-c4b26718ff27" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80c1-a93c-c6f01a58cd4a" class="">센서 노드 전용 명령</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8094-97f6-cb2fceee4a34" class="bulleted-list"><li style="list-style-type:disc">Analog Input Read : 전압과 전류를 모두 읽을 수 있게 함. 산업 현장에서는 노이즈에 강한 4~20mA 전류 출력 센서를 많이 사용.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80fe-afee-c77c847bd0a0" class="bulleted-list"><li style="list-style-type:disc">Serial Setup / Serial write : ‘설정 가능한 시리얼 ←→ RS485 변환기’ , ‘시리얼 디바이스 서버’처럼 사용할 수 있게 해줌. 예를 들어, DB9 포트에 바코드 스캐너나 다른 시리얼 통신 장비를 연결하고, 통합 제어기에서 이 장비와 원격으로 통신하는 것이 가능. Receive timeout 설정은 시리얼 장비의 응답을 기다릴 시간을 지정하는 핵심 파라미터.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-800e-8541-e7f1bdbbad88" class="bulleted-list"><li style="list-style-type:disc">Baudrate : 신호율을 의미, 초당 몇 번의 전기적 신호 상태 변화가 발생하는지를 나타내는 단위.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8078-8ad1-f27a7f454240" class="bulleted-list"><li style="list-style-type:disc">TYPE List<div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8030-9d96-fb68af93a181" class="">RS 시리즈는 모두 EIA(Electronic Industries Alliance)에서 제정한 직렬 통신 표준.</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-806e-aa0b-cb9bdd8ff6b5" class="bulleted-list"><li style="list-style-type:circle">RS 232 : Recommended Standard 232. 주로 PC의 COM 포트에서 사용. Single-ended 신호 방식. 하나의 신호선(Tx, Rx)가 GND를 기준으로 전압 레벨 변경하며 0/1 표시. 주로 PC와 주변 기기 간의 단거리 통신, 장비 초기 설정 및 디버깅용 콘솔 연결에 사용.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8075-b6a7-f4e72688db9b" class="bulleted-list"><li style="list-style-type:circle">RS 422 : Recommended Standard 422. 차동 신호 방식. 두 개의 선을 사용해 전압 차이로 0/1 표현. 외부 노이즈가 두 선에 동일하게 유입되면 전압 차이는 변하지 않음. 하나의 master가 여러 개의 slave에게 뿌려주는 multi-drop 방식에 적합. 주로 공장 자동화, 방송 시스템 등에서 멀리 (최대 1.2km) 보낼 때 사용.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-806f-b7a3-d64650ac5363" class="bulleted-list"><li style="list-style-type:circle"><strong>RS 485</strong> : 본 프로젝트의 메인 통신 방식. 차동 신호 방식. 하나의 선 쌍(A, B)만 사용해서 송신과 수신을 번갈아 수행. 송신 모드/수신 모드 제어 필요. 최대 32개의 장치가 동일한 버스에 연결되어 통신. 주로 빌딩 자동화, 산업용 제어 네트워크, 원격 데이터 수집 등 다수의 장치가 하나의 통신 라인을 공유하는 산업용 시스템에 사용.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80e7-a82c-d988e780847c" class="bulleted-list"><li style="list-style-type:circle">DDI : Digital Data Interface. 특수 목적 인터페이스. 통신과 동시에 DB9 커넥터의 특정 핀을 통해 +12V 전원 공급 기능. 별도 전원 어댑터 없이 시리얼 케이블 하나만으로 전원과 통신을 함께 제공하는 특수 모드</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8023-9054-c1ddc02f8953" class="bulleted-list"><li style="list-style-type:circle">SDI : Serial Data Interface. 특수 목적 인터페이스. SDI-12는 주로 환경 모니터링 분야에서 사용되는 저전력 스마트 센서 통신 프로토콜. 토양 수분 센서, 기상 센서 등 다양한 농업용 센서와 연결하기 위한 인터페이스.</li></ul></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80f2-8687-daa120e355d6" class="">
+</p></div></li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">03_firmware_control.md</summary><div class="indented"><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80d1-89ad-f5ccfe59cbf0" class="">통합 제어기가 유선(RS485)으로 연결된 원격 노드의 펌웨어를 Intel HEX 파일 형식으로 사용해 안전하게 업데이트하는 2단계 절차와 그에 사용되는 명령어 프로토콜 정의.</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80bd-90fd-f9b05059f8ec" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-8035-bb1e-fe04a03a7cb6" class="">Update Flow</h3></div><div style="display:contents" dir="ltr"><figure id="2e9d5b50-6ffa-80dc-9d58-c9378aeaf14b" class="image"><a href="image%202.png"><img style="width:681.984375px" src="image%202.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8059-8055-e13ee296415d" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2e9d5b50-6ffa-80b4-8239-c207808bd27d" class="">Firmware File Data 규격 (Intel HEX)</h2></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8058-9844-c3199c596d67" class="">Intel HEX 형식은 이진 데이터를 주소 정보와 함께 ASCII 텍스트로 안전하게 변환하는 표준 형식. 그래서 어떤 환경에서든 텍스트 파일처럼 쉽게 다룸.</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-803c-ae45-d440b9f41d25" class="">각 라인(레코드는)는 정해진 구조를 가짐.</p></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8003-b845-cc0ca737e768" class="bulleted-list"><li style="list-style-type:disc">‘ : ‘ : 레코드의 시작을 알리는 코드</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-802b-86d0-ec5e8a5d38b0" class="bulleted-list"><li style="list-style-type:disc">길이 : 실제 데이터 부분의 바이트 길이를 나타냄.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8098-be69-dc8b4f6bc6cb" class="bulleted-list"><li style="list-style-type:disc">주소 : 이 데이터가 메모리(Flash)의 어느 주소에 기록되어야 하는지를 알려주는 정보.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80df-9406-d2415b2687d8" class="bulleted-list"><li style="list-style-type:disc">타입 : 레코드의 종류. 00은 실제 펌웨어 데이터. 01은 파일의 끝. 부트로더는 01 타입을 만나면 펌웨어 수신이 완료되었다고 판단.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80d7-bd0d-ef17e7076ed7" class="bulleted-list"><li style="list-style-type:disc">데이터 : 펌웨어의 실제 내용</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80be-b5f8-e67febf44006" class="bulleted-list"><li style="list-style-type:disc">체크섬 : 해당 라인에 오류가 없는지 검증</li></ul></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8019-a0c6-fc939b366a19" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2e9d5b50-6ffa-8065-8240-e777ab42bec2" class="image"><a href="image%203.png"><img style="width:709.984375px" src="image%203.png"/></a></figure></div><div style="display:contents" dir="auto"><h2 id="2e9d5b50-6ffa-809e-86c6-fb135cec5d5c" class="">Update Flow</h2></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80fa-a61c-d8dece3330ad" class="">2단계 업데이트 방식은 매우 안정적인 설계.</p></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80bf-a141-e65f039e93b4" class="">1 단계 : 펌웨어 업로드 (Application)</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-8006-a089-fa3f0fcd9d00" class="bulleted-list"><li style="list-style-type:disc">목표 : 현재 실행 중인 메인 펌웨어에 영향을 주지 않으면서, 새로운 펌웨어를 임시 공간에 먼저 저장.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-803b-ab09-d7e145245ee9" class="bulleted-list"><li style="list-style-type:disc">과정 : <div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-806a-b97e-c5a17ffe3d7e" class="numbered-list" start="1"><li>통합 제어기는 펌웨어 HEX 파일의 각 라인을 FIRMWARE_REQUEST 패킷에 담아 하나씩 노드로 보냄.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80d4-a3d1-ecf2351f0ec1" class="numbered-list" start="2"><li>노드의 메인 펌웨어는 이 패킷을 받아 유효성 검사.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80ff-b929-f46984183022" class="numbered-list" start="3"><li>검사를 통과하면, 패킷 안의 데이터를 내부적으로 이진 데이터로 변환해 플래시 메모리의 임시 저장 영역에 기록.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80bb-92b1-f2552476c5a9" class="numbered-list" start="4"><li>HEX 파일의 모든 라인 전송이 끝나면, 노드는 리셋 후에도 내용이 지워지지 않는 메모리(비휘발성 메모리, Flash)에 ‘업데이트 요청 플래그’ 기록.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-802f-af00-dd487ac86575" class="numbered-list" start="5"><li>스스로 시스템 리셋 수행. watchdog 타이머를 이용해 의도적으로 리셋 발생.</li></ol></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="2e9d5b50-6ffa-80f0-8503-e58835603cb1" class="">2단계 : 펌웨어 적용 (Bootloader)</h3></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-80e7-ba04-d3e63b91b7b3" class="bulleted-list"><li style="list-style-type:disc">목표 : 임시 공간에 저장된 새 펌웨어를 실제 실행 영역으로 옮기고, 새로운 펌웨어로 시스템을 시작. 메인 펌웨어가 아니라, 시스템 부팅 시 가장 먼저 실행되는 부트로더에 의해 수행.</li></ul></div><div style="display:contents" dir="auto"><ul id="2e9d5b50-6ffa-805f-a0d7-fb6d416520b9" class="bulleted-list"><li style="list-style-type:disc">과정 : <div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80bf-86aa-c3de2b17dce3" class="numbered-list" start="1"><li>시스템이 리셋되면 CPU는 부트로더를 먼저 실행함.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80ba-9c41-f20069451d42" class="numbered-list" start="2"><li>부트로더는 가장 먼저 ‘업데이트 요청 플래그’가 있는지 확인.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80b9-b5df-f2c4f80cd037" class="numbered-list" start="3"><li>플래그가 있다면, 부트로더는 임시 저장 영역에 있는 펌웨어 데이터를 실제 메인 펌웨어가 위치한 실행 영역으로 복사, 덮어쓰기.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-8051-9057-df1acde21d86" class="numbered-list" start="4"><li>복사가 끝나면, 다음 부팅 시 또 업데이트를 반복하지 않도록 ‘업데이트 요청 플래그’를 지움.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-80e3-9cb3-ebbe19f56fc1" class="numbered-list" start="5"><li>부트로더는 다시 한번 시스템 리셋 수행.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e9d5b50-6ffa-8058-aba0-f7db6c5e96fb" class="numbered-list" start="6"><li>이제 시스템이 재시작되면, 부트로더는 ‘업데이트 요청 플래그’가 지워진 것을 확인하고, 정상적인 부팅 절차에 따라 새로운 메인 펌웨어 실행. → 업데이트 완료.</li></ol></div></li></ul></div><div style="display:contents" dir="auto"><p id="2efd5b50-6ffa-808b-bdd9-e169c6f5be54" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8005-ab11-e6bfed55b334" class="">⇒ 이 방식의 가장 큰 장점은 안정성. 업로드 중에 전원이 꺼지거나 통신이 끊겨도, 기존 펌웨어는 전혀 손상되지 않으므로 노드가 먹통이 될 위험이 없음. 실제 펌웨어를 덮어 쓰는 위험한 작업은 외부와 통신이 끊어진 상태에서 부트로더에 의해 매우 짧은 시간 동안 원자적(atomically)으로 이루어지므로 신뢰성이 높음.</p></div><div style="display:contents" dir="auto"><p id="2efd5b50-6ffa-80e3-a666-c41d525cdd70" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2efd5b50-6ffa-8059-9d0b-e8199413c591" class="">Firmware 데이터 전송</h2></div><div style="display:contents" dir="auto"><p id="2efd5b50-6ffa-80cb-9b33-f225405ac5e2" class="">FIRMWARE_REQUEST(Command : 0xA2) 패킷의 data 필드는 위에서 설명한 인텔 HEX 레코드의 각 필드(Data Length, Address, Type, Data, Checksum)을 그대로 binary 형태로 담고 있다.</p></div><div style="display:contents" dir="auto"><p id="2efd5b50-6ffa-80de-b89b-cf6bb3ff6972" class="">문서의 ‘ASCII 형태의 Record에서 시작 코드를 제외한 데이터 길이부터 Checksum 부분까지를 Binary로 디코딩 후 전송한다’라는 설명이 핵심.</p></div><div style="display:contents" dir="auto"><p id="2efd5b50-6ffa-80d6-aa3d-df21aad8a36b" class="">예를 들어, 제어기(PC 프로그램 등)은 HEX 파일에서 ‘10400000038…04’와 같은 텍스트 라인을 읽은 후, ASCII 문자 ’1’, ‘0’을 합쳐 16진수 0x10 이라는 1바이트 이진 값으로, ‘4’,’0’,’0’,’0’을 합쳐 0x4000 이라는 2바이트 주소 값으로 변환해야 한다. 변환된 이진 데이터들을 모아 FIRMWARE_REQUEST 패킷의 data 필드에 채워 전송.</p></div></div></details></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-806a-b96c-f79b95a6bdf7" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2e9d5b50-6ffa-80b3-a1a9-c2e88b4ee24b"/></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-8035-a1ba-f94df4ac920a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2e9d5b50-6ffa-80a0-890b-cf028f7dc40c" class="">
+</p></div></div></div></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">README.md</summary><div class="indented"><div style="display:contents" dir="ltr"><figure id="2f5d5b50-6ffa-801b-90f6-e1155a650ead" class="image"><a href="image%204.png"><img style="width:1008px" src="image%204.png"/></a></figure></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">1/25 현재 진행 상황</summary><div class="indented"><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80ba-b1a5-fb1223075c85" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8059-b046-db82521a0ea0" class="">학습 보고서</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8061-b5e5-cdb9b60a7be9" class="">&lt;AVR ATmega328P Architecture&gt;</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80d6-a8bd-df24ffbe14eb" class="">개발 환경</p></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-80cc-b536-c9494abf050f" class="bulleted-list"><li style="list-style-type:disc">Toolchain : 리눅스 환경에서의 컴파일러, 업로더 구성.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-80d9-a512-ca6a33c348f3" class="bulleted-list"><li style="list-style-type:disc">Buildsystem : CMake 기반의 자동화 빌드 환경 구축.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-80fa-95f6-d22c67bb1e29" class="bulleted-list"><li style="list-style-type:disc">Interface : usbasp</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-8018-9842-c06c5e9e139a" class="bulleted-list"><li style="list-style-type:disc">* Toolchain : 입력 값을 받아 처리를 끝내면, 그 결과물이 다음 도구의 입력값으로 연결되는 구조. 호스트(PC)는 코드를 작성하고 Target은 실제 코드가 돌아갈 MCU. -&gt; 호스트 PC의 기계어와 타겟 MCU의 기계어가 다르기 때문에, PC에서 MCU가 이해할 수 있는 기계어를 만들어주는 전용 도구 세트</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-80b1-a606-f3724a16eda2" class="bulleted-list"><li style="list-style-type:disc">* CMake : CMakeLists.txt 설정 파일을 읽어서, &#x27;여러 파일들의 컴파일 순서를 지정하고, 어떤 라이브러리를 링크할 지&#x27;에 대한 작업 지시서.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-8012-a290-f07f1fa6e038" class="bulleted-list"><li style="list-style-type:disc">* usbasp : 오픈 소스 AVR ISP(In System Programmer). PC는 USB 인터페이스로 연결되며, SW(avrdude)로부터 데이터를 받음. MCU는 SPI 통신 규격을 사용해 MCU의 메모리에 접근. USB 프로토콜을 AVR ISP 프로토콜로 변환해주는 프로토콜 컨버터이다.<br/>MOSI : PC(Master) -&gt; MCU로 데이터 전송. MISO : MCU(Slave) -&gt; PC로 데이터 전송. SCK : Serial clock. 데이터 동기화를 위한 클럭</li></ul></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-806a-a93f-ddc0ae1597ea" class="">GPIO 및 LED/타이머 설계 분석<br/>Tmer &amp; Interrupt</p></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-80ae-937c-c89ff8716775" class="bulleted-list"><li style="list-style-type:disc">LED 제어 : 핀의 방향(입/출력)을 정하고 포트의 비트를 직접 조작(DDR/PORT/PIN)하여 핀의 전압 상태 제어.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5d5b50-6ffa-8076-8bbd-cb94241c96ab" class="bulleted-list"><li style="list-style-type:disc">타이머 제어 : TCCRx 레지스터로 동작 모드와 클럭 소스 설정하여 시간 측정 기준 설정. TIMSKx 레지스터로 원하는 시점(오버플로우, 비교 일치)에 인터럽트 활성화. 메인 프로그램 프름에 영향을 주지 않고 주기적인 작업을 백그라운드에서 처리. 특정 조건이 충족 되는 시점을 계속 감시하고 있는 것이 아니라 신호가 바뀔 때만, 조건이 충족 될 때만 CPU가 반응하도록 하여 전력 소모와 리소스 절약 가능.</li></ul></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80ae-ab22-c092ae72dc94" class="">=================================================================</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8045-9f1c-c84c08e42af9" class="">&lt;SmartFarmST32&gt;</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80a6-adcd-c2bedfed08f0" class="">개발 환경<br/>제공된 SmartFarmST32.tar.gz와 스크립트를 홭용해 툴체인 및 빌드 환경 자동화.<br/><a href="http://build.sh/">build.sh</a> 스크립트를 실행해 소스 코드가 정상적으로 컴파일 및 링킹되어 실행 파일이 생성됨을 확인.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80b4-8e38-f69a85ac8881" class="">IDE / 디버거<br/>IDE : VScode. Debugger HW : ST-Link. Debugger SW : OpenOCD(Open On-Chip Debugger, GDB server 기능을 수행해 VScode와 MCU 하드웨어 간의 통신).</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80f3-905a-f592d0da6860" class="">초기 디버깅 시도 시 연결 실패/타깃 불일치 문제 발생. 캡스톤 디자인 팀 피드백을 반영하여 설정 수정.<br/>.vscode/launch.json 파일에 &quot;interface/stlink.cfg&quot; 설명을 명시적으로 추가하여 OpenOCD가 ST-Link 를 인식하도록 조치.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8080-aff3-d27841bb15ba" class="">RTT 기반 로깅 및 초기화 동작<br/>디버깅을 실행했을 때, main()함수의 SEGGER_RTT_init() 호출 지점에서 Break.<br/>SEGGER_RTT은 Real Time Transfer로, MCU 내부 RMA 에 원형 버퍼를 할당, 디버거(ST-Link)가 JTAG/SWD 인터페이스를 통해 램의 데이터를 직접 읽어가는 방식. 이 지점에서 break된 이유는 RAM 상에 &#x27;RTT control block&#x27; 구조체를 생성하고 ID 문자열을 기록. 디버거는 ID를 찾아 RTT 버퍼 위치 파악. VScode의 디버거 설정에는 보통 &#x27;프로그램 시작점에서 멈춤&#x27; 옵션이 활성되어 있어서 SEGGER_RTT_init() 호출 지점에서 break.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8056-8766-cd0b715fd6a9" class="">git branch history tracking<br/>LED_switch, switch_fan 등 기능별 브랜치를 따라가던 중 Doxygen 스타일의 함수 주석 사용 요청 피드백을 확인함.<br/>Doxygen은 C, C++, java, python 등 프로그래밍 언어의 소스 코드에서 문서를 자동으로 생성해주는 도구. 소스 코드 내에 약속된 특수 주석 태그를 작성하면 doxygen이 파싱하여 HTML, PDF 등의 문서 생성.<br/>@brief : 함수나 변수에 대한 간략한 설명<br/>@param : 함수의 매개 변수 설명<br/>@return : 반환값 설명<br/>@note : 주의사항, 특이점 설명</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80df-8951-e8a241310b15" class="">doxygen 주성을 활용하면 내부 로직을 보지 않고도 함수의 역할, 기능 파악이 쉽고, 즉시 사용 가능하다는 점을 알게 됨.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80bf-b75e-cde3ce665db4" class="">=================================================================</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80af-9bcc-f39305400f64" class="">캡스톤 디자인 프로젝트의 전체 서비스 구성도에 따라, MCU와 라즈베리 파이간의 데이터 교환을 위한 RS-485 통신 API 개발을 하고자 합니다. 선행 과정으로 라즈베리파이 OS 환경 구축 및 리눅스 시스템 프로그래밍 기초 학습을 하고 있습니다.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8068-8f34-e92be4afeeb7" class="">개발환경 구축<br/>OS : Raspberry Pi OS (Linux) 설치 및 부팅 완료<br/>네트워크 설정 : SSH 원격 접속</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8011-9a32-f01765182b01" class="">현재 이 부분 까지 완료한 상황입니다.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80c7-8f29-df8b46034b8b" class="">우선, LTE 모듈 없이 독립적인 엣지 통합 제어기로 구축하여, 로컬 InfluxDB를 기반으로 데이터 수집부터 제어 판단까지 수행하도록 설계해보려 합니다. RS-485 통신 드라이버 구축, 패킷 처리 및 물리량 변환을 수행하고, 수집된 데이터를 바탕으로 MCU를 제어하는 자동화 로직 구현 예정입니다. InfluxDB의 data Explorer를 활용해 센서 데이터와제어 상태를 시각화함으로써, 시스템의 제어 알고리즘 동작성을 검증할 계획입니다.</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-80bd-b897-e07a4febd3d7" class="">=================================================================</p></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-804c-b6d4-deb8da85370a" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="2f5d5b50-6ffa-80bf-924b-fa33964a2a61" class="">피드백</h1></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-8071-92f2-cbb8181f064f" class="">
+</p></div></div></details></div><div style="display:contents" dir="auto"><p id="2f5d5b50-6ffa-806c-91b0-da0c850491bb" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

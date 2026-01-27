@@ -1,0 +1,320 @@
+[
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/board_io.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/board_io.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/board_io.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/board_io.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/checksum.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/checksum.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/checksum.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/checksum.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/control_interface_board.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/control_interface_board.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/control_interface_board.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/control_interface_board.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/firmware_manager.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/firmware_manager.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/firmware_manager.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/firmware_manager.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/gps_parser.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/gps_parser.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/gps_parser.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/gps_parser.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/main.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/main.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/main.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/main.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/mxc6655.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/mxc6655.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/mxc6655.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/mxc6655.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/onboard_packet_hadnler.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/onboard_packet_hadnler.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/onboard_packet_hadnler.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/onboard_packet_hadnler.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/packet_manager.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/packet_manager.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/packet_manager.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/packet_manager.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/protocol.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/protocol.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/protocol.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/protocol.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/sensor_interface_board.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/sensor_interface_board.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/sensor_interface_board.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/sensor_interface_board.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/stm32g0xx_hal_msp.c.obj -c /home/mini/xslab/SmartFarm_DY/src/stm32g0xx_hal_msp.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/stm32g0xx_hal_msp.c",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/stm32g0xx_hal_msp.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/stm32g0xx_it.c.obj -c /home/mini/xslab/SmartFarm_DY/src/stm32g0xx_it.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/stm32g0xx_it.c",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/stm32g0xx_it.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/system_config.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/system_config.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/system_config.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/system_config.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/tla2528.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/tla2528.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/tla2528.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/tla2528.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build",
+  "command": "/usr/bin/arm-none-eabi-g++  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu++17 -fno-threadsafe-statics -fno-use-cxa-atexit -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DVERSION=\\\"v1.1.8\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=1 -DVERSION_PATCH=8 -DCOMMIT_HASH=\\\"\\\" -DUSE_HAL_DRIVER -g -o CMakeFiles/SmartFarmST32.dir/src/util.cpp.obj -c /home/mini/xslab/SmartFarm_DY/src/util.cpp",
+  "file": "/home/mini/xslab/SmartFarm_DY/src/util.cpp",
+  "output": "CMakeFiles/SmartFarmST32.dir/src/util.cpp.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -g -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/src/startup_stm32g0c1ketx.s.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/startup_stm32g0c1ketx.s",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/startup_stm32g0c1ketx.s",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/src/startup_stm32g0c1ketx.s.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/src/syscalls.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/syscalls.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/syscalls.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/src/syscalls.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/src/sysmem.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/sysmem.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/sysmem.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/src/sysmem.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/src/system_stm32g0xx.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/system_stm32g0xx.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/src/system_stm32g0xx.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/src/system_stm32g0xx.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_crc_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dac_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_fdcan.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_fdcan.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_fdcan.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_fdcan.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/stm32g0-hal",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/CMSIS/Device/ST/STM32G0xx/Include -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc/Legacy -I/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Inc -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -DUSE_HAL_DRIVER -DVERSION=\\\"v1.6.2\\\" -DVERSION_MAJOR=1 -DVERSION_MINOR=6 -DVERSION_PATCH=2 -DCOMMIT_HASH=\\\"fda6a95cc4ca66d124a194fd4c39b78a0d01a536\\\" -o CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/stm32g0-hal/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c",
+  "output": "lib/stm32g0-hal/CMakeFiles/stm32g0-hal.dir/lib/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/segger-rtt",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -g -o CMakeFiles/segger_rtt.dir/src/SEGGER_RTT.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT.c",
+  "output": "lib/segger-rtt/CMakeFiles/segger_rtt.dir/src/SEGGER_RTT.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/segger-rtt",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -g -o CMakeFiles/segger_rtt.dir/src/SEGGER_RTT_Syscalls_GCC.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_Syscalls_GCC.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_Syscalls_GCC.c",
+  "output": "lib/segger-rtt/CMakeFiles/segger_rtt.dir/src/SEGGER_RTT_Syscalls_GCC.c.obj"
+},
+{
+  "directory": "/home/mini/xslab/SmartFarm_DY/build/lib/segger-rtt",
+  "command": "/usr/bin/arm-none-eabi-gcc  -I/home/mini/xslab/SmartFarm_DY/include -I/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/include -std=gnu17 -fno-exceptions -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mfloat-abi=soft -DSIZE_OPTIMIZE_ENABLE -Wall -ftree-vectorize -fopt-info-vec-all=auto_vectorize_info.txt -DSTM32G0B1xx -Os -gdwarf-4 -DDEBUG -g -o CMakeFiles/segger_rtt.dir/src/SEGGER_RTT_printf.c.obj -c /home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_printf.c",
+  "file": "/home/mini/xslab/SmartFarm_DY/lib/segger-rtt/src/SEGGER_RTT_printf.c",
+  "output": "lib/segger-rtt/CMakeFiles/segger_rtt.dir/src/SEGGER_RTT_printf.c.obj"
+}
+]

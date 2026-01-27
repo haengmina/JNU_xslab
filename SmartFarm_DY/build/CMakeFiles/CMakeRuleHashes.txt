@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+eac976dd32113ac73cbaea440550d30d CMakeFiles/SmartFarmST32_LIST
+e96b2d9348db75b7e0ce5d820d34cf9e CMakeFiles/SmartFarmST32_generate_output
+5d203ba5c33e259a843cb5ddaa46803b CMakeFiles/doxygen_SmartFarmST32
+38c39601d883274e26cf329146daff22 SmartFarmST32.bin
+ae305cf62b9fb8a3cafc87a0120f2185 SmartFarmST32.hex
+12e4dfcd3e2feff0762a49acc0124c7a SmartFarmST32.srec
+5f9ccf2926f902495b656a83e8c68668 lib/stm32g0-hal/CMakeFiles/doxygen_STM32G0_HAL

@@ -6,6 +6,8 @@
  */
 
 #include <packet_manager.h>
+#include <sensor_interface_board.h>
+
 
 void Packet_Manager::init(UART_HandleTypeDef *uart, uint64_t serial_number, Packet_Handler handler)
 {

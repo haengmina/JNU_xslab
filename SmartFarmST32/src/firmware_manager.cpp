@@ -57,6 +57,8 @@ uint8_t Firmware_Manager::Received_Packet_Handler(Packet_Manager* const manager,
 					}
 					else if(auto padding = (target_address - address_offset) - buffer_count; padding)
 					{
+						if((buffer_count + padding + record->length) > sizeof(buffer)) return 1;
+
 						memset((void*)&buffer[buffer_count], 0x00, padding);
 						buffer_count += padding;
 					}

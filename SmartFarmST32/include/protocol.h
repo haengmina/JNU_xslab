@@ -40,7 +40,7 @@
  * @code
  */
 namespace Protocol
-{									// , REG_READ = 0xB0, REG_READ_RESPONSE = 0xB1, REG_WRITE = 0xB2  RS-485 통신 위해 추가
+{
 	enum class COMMAND : uint8_t {NODE_SELECT_REQUEST = 0x20, NODE_SELECT_RESPONSE = 0x21, ERROR_INVALID_REQUEST = 0x22, REQUEST_FAILED = 0x23, REQUEST_SUCCESS = 0x24, 
 									DI_READ = 0x30, DI_THRESHOLD_WRITE = 0x31, DO_READ = 0x32, DO_WRITE = 0x33, DI_RESPONSE = 0x40, DO_RESPONSE = 0x41, 
 									DI_DO_READ_ALL = 0x42, DI_DO_READ_ALL_RESPONSE = 0x43, DO_WRITE_ALL = 0x44,
@@ -48,10 +48,10 @@ namespace Protocol
 									SERIAL_SETUP = 0x70, SERIAL_SETUP_READ =  0x71, SERIAL_WIRTE = 0x80, SERIAL_WRITE_RESPONSE = 0x81, SERIAL_SETUP_READ_RESPONSE = 0x82,
 									ACCEL_READ = 0x90, ACCEL_RESPONSE = 0x91, GPS_READ = 0x92, GPS_RESPONSE = 0x93,
 									FIRMWARE_VERSION_READ = 0xA0, FIRMWARE_VERSION_RESPONSE = 0xA1, FIRMWARE_REQUEST = 0xA2, REG_READ = 0xB0, REG_READ_RESPONSE = 0xB1, REG_WRITE = 0xB2
-								};															
+								};
 	enum class SELECT_STATUS : uint8_t {DENIED = 0x00, OK};
 	struct Interface {
-		enum class TYPE : uint8_t {RS232 = 0x01, RS422, RS485, DDI};
+		enum class TYPE : uint8_t {RS232 = 0x01, RS422, RS485, DDI, SDI};
 		enum class CHANNEL : uint8_t {CH1 = 0x01, CH2};
 		enum class DATABIT : uint8_t {BIT7 = 7, BIT8};
 		enum class PARITY : uint8_t {NONE = 0x00, ODD, EVEN};

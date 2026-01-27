@@ -19,7 +19,7 @@
 class Sensor_Interface_Board
 {
 public:
-	enum class INTERFACE_MODE : uint8_t { RS232, RS422, RS485, SDI, DDI };
+	enum class INTERFACE_MODE : uint8_t { RS232, RS422, RS485, DDI, SDI };
 
 	/**
 	 * @brief Sensor Interface Board를 초기화합니다
@@ -33,6 +33,20 @@ public:
 	 * @param[in]	enable	활성화 여부입니다
 	 */
 	static void set_Power_Output(bool enable);
+
+	/**
+	 * @brief +12V 전원 출력 활성화 상태를 읽습니다
+	 * 
+	 * @return 활성화 여부입니다
+	 */
+	static bool get_Power_Output_Status();
+
+	/**
+	 * @brief +12V 전원 출력 상태를 설정합니다
+	 *
+	 * @param[in]	enable	활성화 여부입니다
+	 */
+	static void set_12V_Output(bool enable);
 
 	/**
 	 * @brief 지정된 통신 채널의 Mode를 설정합니다
@@ -191,7 +205,7 @@ private:
 	static constexpr uint16_t relay_led_pos = 0x00E0;
 	static uint32_t last_rx_tick_ms[uart_channel_count];
 	static uint16_t led_value;
-	static bool power_12v_enabled;								// RS-485 통신 위해 추가
+	static bool power_12v_enabled;
 	static Protocol::Interface::Setting_Buffer uart_setting[uart_channel_count];
 
 	static GPIO_Init_Info power_relay_info[];
@@ -269,6 +283,7 @@ private:
 
 	/**
 	 * @brief RX LED의 상태를 업데이트합니다
+	 * 
 	 */
 	static void update_RX_LED_Status();
 };

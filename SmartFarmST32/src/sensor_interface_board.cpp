@@ -8,6 +8,78 @@
 #include <sensor_interface_board.h>
 #define _BV(x) (1 << x)
 
+static inline bool is_valid_width(uint8_t w)
+{
+    return (w == 1 || w == 2 || w == 4);
+}
+
+static uint8_t reg_read(uint16_t addr, uint8_t width, uint8_t *out)
+{
+    if(!is_valid_width(width)) return 1;
+
+    switch(addr)
+    {
+        case 0x0100: // AV1_VOLTAGE_mV (int16)
+        {
+            if(width != 2) return 1;
+            int16_t mv = Sensor_Interface_Board::get_Voltage_mV(0);
+            memcpy(out, &mv, 2);
+            return 0;
+        }
+
+        case 0x0120: // AI1_CURRENT_uA (uint16)
+        {
+            if(width != 2) return 1;
+            uint16_t ua = Sensor_Interface_Board::get_Current_uA(0);
+            memcpy(out, &ua, 2);
+            return 0;
+        }
+
+        case 0x0140: // HUMIDITY_%RH (uint16, 0.1%RH)
+        {
+            if(width != 2) return 1;
+            int16_t mv = Sensor_Interface_Board::get_Voltage_mV(0);
+            float rh = mv / 30.0f;
+            if(rh < 0.0f) rh = 0.0f;
+            else if(rh > 100.0f) rh = 100.0f;
+            uint16_t rh_tenths = (uint16_t)(rh * 10.0f + 0.5f);
+            memcpy(out, &rh_tenths, 2);
+            return 0;
+        }
+
+        case 0x0160: // FAN_POWER_ENABLE (uint8)
+        {
+            if(width != 1) return 1;
+            uint8_t enabled = Sensor_Interface_Board::get_Power_Output_Status() ? 1 : 0;
+            memcpy(out, &enabled, 1);
+            return 0;
+        }
+
+        default:
+            return 1;
+    }
+}
+
+static uint8_t reg_write(uint16_t addr, uint8_t width, const uint8_t *in)
+{
+    if(!is_valid_width(width)) return 1;
+
+    switch(addr)
+    {
+        case 0x0160: // FAN_POWER_ENABLE (uint8)
+        {
+            if(width != 1) return 1;
+            uint8_t value = in[0];
+            if(value > 1) return 1;
+            Sensor_Interface_Board::set_12V_Output(value == 1);
+            return 0;
+        }
+
+        default:
+            return 1;
+    }
+}
+
 GPIO_Init_Info Sensor_Interface_Board::power_relay_info[] = {
 	{ GPIOD, {.Pin = _BV(14), GPIO_MODE_OUTPUT_PP, GPIO_NOPULL }}, //5V_OUT_CTRL
 	{ GPIOD, {.Pin = _BV(15), GPIO_MODE_OUTPUT_PP, GPIO_NOPULL }}, //12V_OUT_CTRL
@@ -94,6 +166,7 @@ Sensor_Interface_Board::Buffer Sensor_Interface_Board::serial_interface_received
 TLA2528 Sensor_Interface_Board::adc = TLA2528();
 uint16_t Sensor_Interface_Board::led_value = 0x00;
 uint32_t Sensor_Interface_Board::last_rx_tick_ms[uart_channel_count] = {};
+bool Sensor_Interface_Board::power_12v_enabled = false;
 Protocol::Interface::Setting_Buffer Sensor_Interface_Board::uart_setting[uart_channel_count] = {
 	{
 		.channel = Protocol::Interface::CHANNEL::CH1
@@ -155,11 +228,11 @@ void Sensor_Interface_Board::init()
 	set_Power_Output(true);
 	set_Interface_Mode(0, INTERFACE_MODE::RS232);
 	set_Interface_Mode(1, INTERFACE_MODE::RS232);
-	
 }
 
 void Sensor_Interface_Board::set_Power_Output(bool enable)
 {
+	power_12v_enabled = enable;
 	for(auto &target : power_relay_info)
 	{
 		if(enable)
@@ -174,6 +247,28 @@ void Sensor_Interface_Board::set_Power_Output(bool enable)
 		}
 	}
 
+	set_LED_Driver_Value(led_value);
+}
+
+bool Sensor_Interface_Board::get_Power_Output_Status()
+{
+	return power_12v_enabled;
+}
+
+void Sensor_Interface_Board::set_12V_Output(bool enable)
+{
+	auto &target = power_relay_info[1]; //12V_OUT_CTRL
+	if(enable)
+	{
+		target.gpio->ODR |= target.init.Pin;
+		led_value |= relay_led_pos;
+	}
+	else
+	{
+		target.gpio->ODR &= ~target.init.Pin;
+		led_value &= ~relay_led_pos;
+	}
+	power_12v_enabled = enable;
 	set_LED_Driver_Value(led_value);
 }
 
@@ -530,6 +625,18 @@ uint8_t Sensor_Interface_Board::set_Interface_Setting(const Protocol::Interface:
 			return 1;
 	}
 
+	target->AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_TXINVERT_INIT | UART_ADVFEATURE_RXINVERT_INIT;
+	if(param.type == Protocol::Interface::TYPE::SDI)
+	{
+		target->AdvancedInit.RxPinLevelInvert = UART_ADVFEATURE_RXINV_ENABLE;
+		target->AdvancedInit.TxPinLevelInvert = UART_ADVFEATURE_TXINV_ENABLE;
+	}
+	else
+	{
+		target->AdvancedInit.RxPinLevelInvert = UART_ADVFEATURE_RXINV_DISABLE;
+		target->AdvancedInit.TxPinLevelInvert = UART_ADVFEATURE_TXINV_DISABLE;
+	}
+
 	target->Init.WordLength = UART_WORDLENGTH_8B;
 	target->Init.Mode = UART_MODE_TX_RX;
 	target->Init.OverSampling = UART_OVERSAMPLING_16;
@@ -557,6 +664,7 @@ uint8_t Sensor_Interface_Board::set_Interface_Setting(const Protocol::Interface:
 			break;
 
 		case Protocol::Interface::TYPE::DDI:
+		case Protocol::Interface::TYPE::SDI:
 			set_Interface_Mode(channel_index, Sensor_Interface_Board::INTERFACE_MODE::DDI);
 			break;
 
@@ -758,11 +866,12 @@ uint8_t Sensor_Interface_Board::Received_Packet_Handler(Packet_Manager* const ma
 					return 1;
 			}
 			auto target = get_Interface_Handle(target_index);
+			auto tx_data_length = request->header.data_length - sizeof(Protocol::Interface::Data_Buffer);
 			if(serial_interface[target_index] == INTERFACE_MODE::DDI) { set_DB9_12V_Output(true); }
-			if(request->header.data_length)
+			if(tx_data_length)
 			{
 				set_Interface_TX(target_index, true);
-				HAL_UART_Transmit(target, buffer->data, request->header.data_length - 1, -1);
+				HAL_UART_Transmit(target, buffer->data, tx_data_length, -1);
 				set_Interface_TX(target_index, false);
 			}
 
@@ -800,6 +909,48 @@ uint8_t Sensor_Interface_Board::Received_Packet_Handler(Packet_Manager* const ma
 			response.init_Data((uint8_t*)buffer, sizeof(buffer));
 			break;
 		}
+
+		case Protocol::COMMAND::REG_READ:
+		{
+    		// data_length == 4 : addr(2) + width(1) + reserved(1)
+    		if(request->header.data_length != 4) return 1;
+
+    		uint16_t addr = (uint16_t)request->data[0] | ((uint16_t)request->data[1] << 8);
+    		uint8_t width = request->data[2];
+    		if(!is_valid_width(width)) return 1;
+
+    		uint8_t value[4] = {0};
+    		if(reg_read(addr, width, value)) return 1;
+
+		    // response : addr(2) + width(1) + value(width)
+    		uint8_t resp[3 + 4] = {0};
+    		resp[0] = (uint8_t)(addr & 0xFF);
+    		resp[1] = (uint8_t)(addr >> 8);
+    		resp[2] = width;
+    		memcpy(&resp[3], value, width);
+
+    		response.header.command = Protocol::COMMAND::REG_READ_RESPONSE;
+    		response.init_Data(resp, 3 + width);
+    		break;
+		}
+
+		case Protocol::COMMAND::REG_WRITE:
+		{
+    		// data_length >= 3: addr(2) + width(1) + value(width)
+    		if(request->header.data_length < 3) return 1;
+
+    		uint16_t addr = (uint16_t)request->data[0] | ((uint16_t)request->data[1] << 8);
+		    uint8_t width = request->data[2];
+    		if(!is_valid_width(width)) return 1;
+    		if(request->header.data_length != (uint8_t)(3 + width)) return 1;
+
+    		uint8_t rc = reg_write(addr, width, &request->data[3]);
+    		response.header.command = (rc == 0) ? Protocol::COMMAND::REQUEST_SUCCESS
+                                        : Protocol::COMMAND::REQUEST_FAILED;
+    		break;
+		}
+
+
 
 		default:
 			return 2;

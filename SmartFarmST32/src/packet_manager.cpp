@@ -8,13 +8,16 @@
 #include <packet_manager.h>
 #include <sensor_interface_board.h>
 
-
 void Packet_Manager::init(UART_HandleTypeDef *uart, uint64_t serial_number, Packet_Handler handler)
 {
 	target_uart = uart;
 	node_serial_number = serial_number;
 	packet_handler = handler;
 	set_Isolated_RS485_TX_Enable(false);
+	if(target_uart && target_uart->Instance == USART5)
+	{
+		Sensor_Interface_Board::set_Interface_TX(0, false);
+	}
 }
 
 void Packet_Manager::set_Received_Data(uint8_t data)
@@ -95,13 +98,29 @@ bool Packet_Manager::get_Node_Selected_Status()
 
 void Packet_Manager::set_Transmit_Data(uint8_t *data, uint16_t length)
 {
-	set_Isolated_RS485_TX_Enable(true);
+	bool use_db9 = (target_uart && target_uart->Instance == USART5);
+	if(use_db9)
+	{
+		Sensor_Interface_Board::set_Interface_TX(0, true);
+	}
+	else
+	{
+		set_Isolated_RS485_TX_Enable(true);
+	}
 	volatile uint16_t delay = 0xFFF;
 	while(delay--); //wait for switching
 
 	HAL_UART_Transmit(target_uart, data, length, -1);
-	set_UART_Receive_Start(0);
-	set_Isolated_RS485_TX_Enable(false);
+	if(use_db9)
+	{
+		set_UART_Receive_Start(3);
+		Sensor_Interface_Board::set_Interface_TX(0, false);
+	}
+	else
+	{
+		set_UART_Receive_Start(0);
+		set_Isolated_RS485_TX_Enable(false);
+	}
 }
 
 void Packet_Manager::update_Transmit_Packet()

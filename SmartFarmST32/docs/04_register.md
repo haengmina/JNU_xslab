@@ -1,5 +1,5 @@
 # Register
-이 문서는 **센서 보드 기반의 레지스터 접근(REG_READ/REG_WRITE)**을 위한 최소 정의서입니다.
+이 문서는 **센서 보드 기반의 레지스터 접근(REG_READ/REG_WRITE)**을 위한 설명서입니다.
 현재 펌웨어에 **구현되어 실제로 동작하는 범위**만 포함합니다.
 
 ## 공통 규칙
@@ -11,7 +11,7 @@
 - REG_WRITE: `addr(2) + width(1) + value(width)`
 
 ## 레지스터 목록 (현재 구현됨)
-|--주소--|-------이름-----|-폭-|--타입--|접근|단위|----------------설명--------------|
+| 주소 | 이름 | 폭 | 타입 | 접근 | 단위 | 설명 |
 |--------|----------------|---|--------|---|----|----------------------------------|
 | 0x0100 | AV1_VOLTAGE_mV | 2 | int16  | R | mV | 센서 보드 아날로그 입력 AV1 전압 (AM1011A) |
 | 0x0120 | AI1_CURRENT_uA | 2 | uint16 | R | uA | 센서 보드 아날로그 입력 AI1 전류 |
@@ -28,21 +28,21 @@
 ## 테스트 명령 (reg_test.py)
 기본 실행 시 0x0100/0x0120/0x0140/0x0160을 순서대로 READ합니다.
 ```
-python src/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c
+python extra/script/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c
 ```
 
 ### 원하는 주소만 READ
 ```
-python src/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --read 0x0100 --read 0x0160
+python extra/script/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --read 0x0100 --read 0x0160
 ```
 
 ### WRITE (팬 전원 ON/OFF)
 ```
-python src/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=1
-python src/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=0
+python extra/script/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=1
+python extra/script/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=0
 ```
 
 ### READ/WRITE 혼합
 ```
-python src/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=1 --read 0x0160
+python extra/script/reg_test.py /dev/ttyUSB0 19200 0x4653500d004c003c --write 0x0160=1 --read 0x0160
 ```

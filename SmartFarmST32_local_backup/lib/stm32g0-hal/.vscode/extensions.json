@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "akiramiyakoda.cppincludeguard",
+        "ms-vscode.cmake-tools",
+        "spadin.memento-inputs",
+        "cschlosser.doxdocgen",
+        "marus25.cortex-debug",
+        "ZixuanWang.linkerscript",
+        "jeff-hykin.better-cpp-syntax",
+        "myml.vscode-markdown-plantuml-preview",
+        "peakchen90.open-html-in-browser",
+        "hediet.vscode-drawio",
+        "tomoki1207.pdf"
+    ]
+}

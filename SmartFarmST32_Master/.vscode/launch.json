@@ -1,0 +1,123 @@
+{
+    "configurations": [
+        {
+            "configFiles": [
+                // "interface/ftdi/universal-debugger-jtag.cfg",
+                "interface/ftdi/universal-debugger-swd.cfg",
+                "target/stm32g0x.cfg"
+            ],
+            "cwd": "${workspaceRoot}",
+            "debuggerArgs": [
+                "-iex",
+                "set auto-load safe-path /"
+            ],
+            "executable": "${command:cmake.launchTargetPath}",
+            "gdbPath": "gdb-multiarch",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "name": "(gdb) OpenOCD Launch",
+            "openOCDLaunchCommands": [
+                "foreach t [target names] { $t configure -event gdb-detach {resume}}"
+            ],
+            "postLaunchCommands": [
+                "set mem inaccessible-by-default off",
+                "info target",
+                "monitor targets",
+                "info mem"
+            ],
+            "request": "launch",
+            "rttConfig": {
+                "decoders": [
+                    {
+                        "label": "Segger RTT",
+                        "port": 0,
+                        "type": "console"
+                    }
+                ],
+                "enabled": true
+            },
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "svdFile": "lib/stm32g0-hal/extra/svd/STM32G0B1.svd",
+            "type": "cortex-debug"
+        },
+        {
+            "configFiles": [
+                // "interface/ftdi/universal-debugger-jtag.cfg",
+                "interface/ftdi/universal-debugger-swd.cfg",
+                "target/stm32g0x.cfg"
+            ],
+            "cwd": "${workspaceRoot}",
+            "debuggerArgs": [
+                "-iex",
+                "set auto-load safe-path /"
+            ],
+            "executable": "${command:cmake.launchTargetPath}",
+            "gdbPath": "gdb-multiarch",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "name": "(gdb) OpenOCD Attach",
+            "openOCDLaunchCommands": [
+                "foreach t [target names] { $t configure -event gdb-detach {resume}}"
+            ],
+            "postAttachCommands": [
+                "set mem inaccessible-by-default off",
+                "info target",
+                "monitor targets",
+                "info mem"
+            ],
+            "request": "attach",
+            "rttConfig": {
+                "address": "auto",
+                "decoders": [
+                    {
+                        "label": "JLink RTT",
+                        "port": 0,
+                        "type": "console"
+                    }
+                ],
+                "enabled": true
+            },
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "svdFile": "/lib/stm32g0-hal/extra/svd/STM32G0B1.svd",
+            "type": "cortex-debug"
+        },
+        {
+            "MIMode": "gdb",
+            "cwd": "${workspaceRoot}",
+            "externalConsole": false,
+            "miDebuggerPath": "gdb-multiarch",
+            "miDebuggerServerAddress": " ${input:gdb_server_address}",
+            "name": "(gdb server) Connect",
+            "program": "${command:cmake.getLaunchTargetPath}",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "stopAtEntry": true,
+            "type": "cppdbg"
+        }
+    ],
+    "inputs": [
+        {
+            "args": {
+                "description": "Target gdbserver",
+                "id": "gdb_server_address",
+                "placeholder": "host:port"
+            },
+            "command": "memento.promptString",
+            "id": "gdb_server_address",
+            "type": "command"
+        }
+    ],
+    "version": "0.2.0"
+}

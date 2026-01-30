@@ -1,0 +1,85 @@
+# git-cliff ~ configuration file
+# https://git-cliff.org/docs/configuration
+
+[changelog]
+# template for the changelog header
+header = """
+"""
+# template for the changelog body
+body = """
+---
+{% if version %}\
+        # {{ version }}
+        > **Release Date:** {{ timestamp | date(format="%Y-%m-%d") }} | \
+    {% if previous.version %}\
+        **Full Change Log:** [{{ previous.version }}...{{ version }}]({{ get_env(name="CI_PROJECT_URL") }}/compare/{{ previous.version }}...{{ version }})
+    {% else %}\
+        {% set first_commit = commits | first %}\
+        **Full Change Log:** [...{{ version }}]({{ get_env(name="CI_PROJECT_URL") }}/compare/{{ first_commit.id }}...{{ version }})
+    {% endif %}\
+{% else %}\
+    # [unreleased]
+    {% set first_commit = commits | first %} {% set last_commit = commits | last %}\
+    > **Full Change Log:** [{{ first_commit.id | truncate(length=7, end="") }}...{{ last_commit.id | truncate(length=7, end="") }}]({{ get_env(name="CI_PROJECT_URL") }}/compare/{{ first_commit.id }}...{{ last_commit.id }})
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+    ## {{ group | striptags | trim | upper_first }}
+    {% for commit in commits
+    | filter(attribute="scope")
+    | sort(attribute="scope") %}
+        - **({{commit.scope}})**{% if commit.breaking %} [**breaking**]{% endif %} \
+            {{ commit.message }} - ([{{ commit.id | truncate(length=7, end="") }}]({{ get_env(name="CI_PROJECT_URL") }}/commit/{{ commit.id }})) - {{ commit.author.name }}
+    {%- endfor -%}
+    {% raw %}\n{% endraw %}\
+    {% for commit in commits | unique(attribute="message") %}
+        {%- if commit.scope -%}
+        {% else -%}
+            - {% if commit.breaking %} [**breaking**]{% endif %}\
+                {{ commit.message }} - ([{{ commit.id | truncate(length=7, end="") }}]({{ get_env(name="CI_PROJECT_URL") }}/commit/{{ commit.id }})) - {{ commit.author.name }}
+        {% endif -%}
+    {% endfor -%}
+{% endfor %}\n
+"""
+# template for the changelog footer
+footer = """
+"""
+# remove the leading and trailing whitespace from the templates
+trim = true
+# postprocessors
+postprocessors = [
+]
+
+[git]
+# parse the commits based on https://www.conventionalcommits.org
+conventional_commits = true
+# filter out the commits that are not conventional
+filter_unconventional = true
+# process each line of a commit as an individual commit
+split_commits = false
+# regex for preprocessing the commit messages
+commit_preprocessors = [
+    { pattern = "\\(#([0-9]+)\\)", replace = '([#${1}]({{ get_env(name="CI_PROJECT_URL") }}/issues/${1}))'}
+]
+# regex for parsing and grouping commits
+commit_parsers = [
+    { message = "^feat", group = "Features" },
+    { message = "^fix", group = "Bug Fixes" },
+    { message = "^design", group = "Design" },
+    { message = "^remove", group = "Remove" },
+    { message = "^doc", group = "Documentation" },
+    { message = "^perf", group = "Performance" },
+    { message = "^refactor", group = "Refactoring" },
+    { message = "^style", group = "Style" },
+    { message = "^revert", group = "Revert" },
+    { message = "^test", group = "Tests" },
+    { message = "^chore\\(version\\):", skip = true },
+    { message = "^chore", group = "Miscellaneous Chores" },
+    { body = ".*security", group = "Security" },
+]
+# filter out the commits that are not matched by commit parsers
+filter_commits = false
+tag_pattern = '^v\d+\.\d+\.\d.*'
+# sort the tags topologically
+topo_order = false
+# sort the commits inside sections by oldest/newest order
+sort_commits = "oldest"

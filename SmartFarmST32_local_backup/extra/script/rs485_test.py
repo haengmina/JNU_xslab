@@ -1,4 +1,9 @@
 # 라즈베리파이에 저장하고 라즈베리파이에서 실행.
+# 실행 명령어 : python3 rs485_test.py /dev/ttyUSB0 19200 0x4653500D004C003C --read_version --read_fan_status --verbose
+# 테스트용 팬 제어를 포함한 명령어 Fan off
+# : python3 rs485_test.py /dev/ttyUSB0 19200 0x4653500D004C003C --write 0x0160:1=0 --verbose
+# 테스트용 팬 제어를 포함한 명령어 Fan on
+# : python3 rs485_test.py /dev/ttyUSB0 19200 0x4653500D004C003C --write 0x0160:1=1 --verbose
 
 import serial
 import struct
@@ -20,6 +25,10 @@ CMD_REG_READ_RESP    = 0xB1
 CMD_REG_WRITE        = 0xB2
 CMD_REQUEST_FAILED   = 0x23
 CMD_REQUEST_SUCCESS  = 0x24
+
+# Analog Commands
+CMD_ANALOG_READ_ALL = 0x51
+CMD_ANALOG_ALL_RESPONSE = 0x61
 
 # --- Utility Functions (Adapted from reg_test.py for simplicity) ---
 def ts() -> str:
@@ -213,6 +222,100 @@ def reg_read_transaction(ser: serial.Serial, addr: int, width: int, timeout_s=1.
     else:
         print(f"[{ts()}] [REG_READ] Unexpected response: cmd=0x{cmd:02X}, dlen={dlen}, data={data.hex()}")
         return None
+    
+def read_analog_all_transaction(ser: serial.Serial, timeout_s=1.0, verbose=False) -> list:
+    # Read all analog voltage and current values from the sensor node.
+    pkt = make_packet(CMD_ANALOG_READ_ALL)
+
+    drain(ser, "PRE_ANALOG_READ_ALL_DRAIN")
+    tx(ser, pkt, verbose=verbose, label="ANALOG_READ_ALL_TX")
+
+    resp = read_packet(ser, timeout_s=timeout_s, verbose=verbose)
+    if resp is None:
+        print(f"[{ts()}] [ANALOG_READ_ALL] No response received (timeout={timeout_s}s).")
+        return None
+    if resp[0] == "bad_checksum":
+        print(f"[{ts()}] [ANALOG_READ_ALL] Checksum error: {resp}")
+        return None
+    
+    _, cmd, dlen, data, _chk = resp
+    if cmd == CMD_ANALOG_ALL_RESPONSE:
+        expected_dlen = 16
+        if dlen != expected_dlen:
+            print(f"[{ts()}] [ANALOG_READ_ALL] Unexpected response data length: {dlen}. Expected {expected_dlen}.")
+            return None
+        
+        results = []
+
+        for i in range(4):
+            voltage_mV = struct.unpack_from("<h", data, i * 2)[0]
+            current_uA = struct.unpack_from("<H", data, (4 * 2) + i * 2)[0]
+            results.append({'channel': i, 'voltage_mV': voltage_mV, 'current_uA': current_uA})
+            print(f"[{ts()}] [ANALOG_READ_ALL] CH{i+1}: Voltage={voltage_mV}mV, Current={current_uA}uA")
+        return results
+    elif cmd == CMD_REQUEST_FAILED:
+        print(f"[{ts()}] [ANALOG_READ_ALL] Request failed response received.")
+        return None
+    else:
+        print(f"[{ts()}] [ANALOG_READ_ALL] Unexpected response: cmd=0x{cmd:02X}, dlen={dlen}, data={data.hex()}")
+        return None
+
+def reg_write_transaction(ser: serial.Serial, addr: int, width: int, value: bytes, timeout_s=1.0, verbose=False):
+    if value is None:
+        value = b""
+    if len(value) != width:
+        print(f"[{ts()}] [REG_WRITE] Value length {len(value)} != width {width}")
+        return False
+    
+    payload = struct.pack("<HB", addr & 0xFFFF, width & 0xFF) + value
+    pkt = make_packet(CMD_REG_WRITE, payload)
+
+    drain(ser, "PRE_REG_WRITE_DRAIN")
+    tx(ser, pkt, verbose=verbose, label="REG_WRITE_TX")
+
+    resp = read_packet(ser, timeout_s=timeout_s, verbose=verbose)
+    if resp is None:
+        print(f"[{ts()}] [REG_WRITE] No response (timeout={timeout_s}s)")
+        return False
+    if resp[0] == "bad_checksum":
+        print(f"[{ts()}] [REG_WRITE] Checksum error: {resp}")
+        return False
+    
+    _, cmd, dlen, data, _chk = resp
+    if dlen != 0:
+        print(f"[{ts()}] [REG_WRITE] Unexpected response payload length {dlen}, data={data.hex()}")
+        return False
+    if cmd == CMD_REQUEST_SUCCESS:
+        print(f"[{ts()}] [REG_WRITE] Request SUCCESS.")
+        return True
+    if cmd == CMD_REQUEST_FAILED:
+        print(f"[{ts()}] [REG_WRITE] Reques FAILED.")
+        return False
+
+    print(f"[{ts()}] [REG_WRITE] Unexpected response cmd=0x{cmd:02X}, len={dlen}, data={data.hex()}")
+    return False
+
+def parse_addr_width(s: str):
+    if ":" in s:
+        addr_s, width_s = s.split(":", 1)
+        addr = int(addr_s, 0)
+        width = int(width_s, 0)
+        return addr, width
+    addr = int(s, 0)
+    raise ValueError(f"width required for addr 0x{addr:04X} (use addr:width)")
+
+def parse_write_spec(s: str):
+    if "=" not in s:
+        raise ValueError("write spec must be addr[:width]=value")
+    left, value_s = s.split("=", 1)
+    addr, width = parse_addr_width(left)
+    value_int = int(value_s, 0)
+    max_val = (1 << (width * 8)) - 1
+    if value_int < 0 or value_int > max_val:
+        raise ValueError(f"value out of range for width {width}: {value_int}")
+    value = value_int.to_bytes(width, byteorder="little", signed=False)
+    return addr, width, value_int, value
+
 
 def main():
     p = argparse.ArgumentParser(description="RS485 communication test and MCU setup.")
@@ -223,6 +326,9 @@ def main():
     p.add_argument("--verbose", action="store_true", help="Print verbose diagnostics")
     p.add_argument("--read_version", action="store_true", help="Read firmware version of the node")
     p.add_argument("--read_fan_status", action="store_true", help="Read fan power enable status (Reg 0x0160)")
+    p.add_argument("--read_analog_all", action="store_true", help="Read all analog voltage and current values")
+    p.add_argument("--write", action="append", default=[], metavar="ADDR:WIDTH=VALUE", help="Write register (e.g. 0x0160:1=1). Can repeat. (ADDR:WIDTH=VALUE)")
+
 
     args = p.parse_args()
 
@@ -249,18 +355,51 @@ def main():
             # --- 2. Perform actions based on arguments ---
             if args.read_version:
                 print(f"[{ts()}] Attempting to read firmware version...")
-                read_firmware_version(ser, timeout_s=args.timeout, verbose=args.verbose)
+                if node_select_transaction(ser, sn, timeout_s=args.timeout, verbose=args.verbose):
+                    read_firmware_version(ser, timeout_s=args.timeout, verbose=args.verbose)
+                else:
+                    print(f"[{ts()}] Node re-selection failed before reading firmware version.")
 
             if args.read_fan_status:
                 print(f"[{ts()}] Attempting to read Fan Power Enable (Reg 0x0160)...")
-                fan_status_data = reg_read_transaction(ser, 0x0160, 1, timeout_s=args.timeout, verbose=args.verbose)
-                if fan_status_data:
-                    fan_on = struct.unpack("<B", fan_status_data)[0]
-                    print(f"[{ts()}] [REG_READ] FAN_POWER_ENABLE (0x0160) = {fan_on} (0=OFF, 1=ON)")
+                if node_select_transaction(ser, sn, timeout_s=args.timeout, verbose=args.verbose):
+                    fan_status_data = reg_read_transaction(ser, 0x0160, 1, timeout_s=args.timeout, verbose=args.verbose)
+                    if fan_status_data:
+                        fan_on = struct.unpack("<B", fan_status_data)[0]
+                        print(f"[{ts()}] [REG_READ] FAN_POWER_ENABLE (0x0160) = {fan_on} (0=OFF, 1=ON)")
+                else:
+                    print(f"[{ts()}] Node re-selection failed before reading fan status.")
             
-            if not (args.read_version or args.read_fan_status):
+            # Logic to handle --read_analog_all argument
+            if args.read_analog_all:
+                print(f"[{ts()}] Attempting to read all analog values...")
+                if node_select_transaction(ser, sn, timeout_s=args.timeout, verbose=args.verbose):
+                    analog_data = read_analog_all_transaction(ser, timeout_s=args.timeout, verbose=args.verbose)
+                    if analog_data:
+                        print(f"[{ts()}] [ANALOG_READ_ALL] Successfully received analog data for all channels.")
+                    else:
+                        print(f"[{ts()}] [ANALOG_READ_ALL] Failed to read analog data.")
+                else:
+                    print(f"[{ts()}] Node re-selection failed before reading all analog values.")
+
+            for spec in args.write:
+                try:
+                    addr, width, value_int, value = parse_write_spec(spec)
+                except ValueError as e:
+                    print(f"[{ts()}] WRITE parse error: {e}")
+                    sys.exit(2)
+
+                print(f"[{ts()}] Attempting to write REG 0x{addr:04X} with value {value_int}...")
+                if node_select_transaction(ser, sn, timeout_s=args.timeout, verbose=args.verbose):
+                    success = reg_write_transaction(
+                        ser, addr, width, value, timeout_s=args.timeout, verbose=args.verbose)
+                    print(f"[{ts()}] REG 0x{addr:04X} WRITE = {value_int} ({'OK' if success else 'FAIL'})")
+                else:
+                    print(f"[{ts()}] Node re-selection failed before writing REG 0x{addr:04X}.")
+
+            if not (args.read_version or args.read_fan_status or args.read_analog_all or args.write):
                 print(f"[{ts()}] No specific action requested. Node selected successfully.")
-                print(f"[{ts()}] Use --read_version or --read_fan_status to perform actions.")
+                print(f"[{ts()}] Use --read_version or --read_fan_status, --read_analog_all, or --write to perform actions.")
 
         else:
             print(f"[{ts()}] Node selection failed. Please check serial number, wiring, power, and MCU firmware.")

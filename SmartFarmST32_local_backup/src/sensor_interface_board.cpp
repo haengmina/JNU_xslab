@@ -6,7 +6,10 @@
  */
 
 #include <sensor_interface_board.h>
+#include <use_sensor.h>
 #define _BV(x) (1 << x)
+
+
 
 static inline bool is_valid_width(uint8_t w)
 {
@@ -38,7 +41,7 @@ static uint8_t reg_read(uint16_t addr, uint8_t width, uint8_t *out)
         case 0x0140: // HUMIDITY_%RH (uint16, 0.1%RH)
         {
             if(width != 2) return 1;
-            int16_t mv = Sensor_Interface_Board::get_Voltage_mV(0);
+            int16_t mv = Sensor_Interface_Board::get_Voltage_mV(1);
             float rh = mv / 30.0f;
             if(rh < 0.0f) rh = 0.0f;
             else if(rh > 100.0f) rh = 100.0f;
@@ -54,6 +57,23 @@ static uint8_t reg_read(uint16_t addr, uint8_t width, uint8_t *out)
             memcpy(out, &enabled, 1);
             return 0;
         }
+
+		case 0x0180: // SENSOR_POWER_STATE (uint8)
+		{
+			if(width != 1) return 1;
+			uint8_t enabled = Sensor_Interface_Board::get_Power_Output_Status() ? 1 : 0;
+			memcpy(out, &enabled, 1);
+			return 0;
+		}
+
+		case 0x0200: // TEMPERATURE_C (int16)
+		{
+			if(width != 2) return 1;
+			float temp_c_float = AM1011A_temp(0);
+			int16_t temp_c_int10 = (int16_t)(temp_c_float * 10.0f + (temp_c_float > 0 ? 0.5f : -0.5f));
+			memcpy(out, &temp_c_int10, 2);
+			return 0;
+		}
 
         default:
             return 1;
@@ -74,6 +94,15 @@ static uint8_t reg_write(uint16_t addr, uint8_t width, const uint8_t *in)
             Sensor_Interface_Board::set_12V_Output(value == 1);
             return 0;
         }
+
+		case 0x0180:
+		{
+			if(width != 1) return 1;
+			uint8_t value = in[0];
+			if(value > 1) return 1;
+			Sensor_Interface_Board::set_Power_Output(value == 1);
+			return 0;
+		}
 
         default:
             return 1;

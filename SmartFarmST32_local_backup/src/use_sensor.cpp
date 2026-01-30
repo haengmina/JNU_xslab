@@ -16,7 +16,7 @@ static bool temp_state = false;
 static float T_mV = 0.0f;
 static float H_mV = 0.0f;
 
-static float AM1011A_temp(int v1)
+float AM1011A_temp(int v1)
 {
     T_mV = Sensor_Interface_Board::get_Voltage_mV(v1);
 

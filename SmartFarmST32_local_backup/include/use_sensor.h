@@ -26,5 +26,6 @@
  */
 void use_sensor(int v1, float t, int v2, float p);
 
+float AM1011A_temp(int v1);
 
 #endif
